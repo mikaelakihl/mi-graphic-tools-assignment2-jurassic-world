@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/fed24d-grafiska-verktyg-kejsartamarinerna/',
   plugins: [
     vue(),
     vueDevTools(),

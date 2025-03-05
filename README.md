@@ -1,25 +1,39 @@
-# About the design
- 
-We searched for the font used in the movie but couldn't find it for free, so we chose alternative fonts that felt fitting.
+# kejsartamarinerna
 
-After deciding on the movie, colors, and fonts for the project, we experimented with different button designs. We created buttons with various purposes that complemented the overall design.
+This template should help get you started developing with Vue 3 in Vite.
 
-We designed three versions of the movie premiere page: one for mobile, one for tablet, and one for desktop. For each version, we also created a grid layout.
+## Recommended IDE Setup
 
-Our design consists of four pages:
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-A homepage featuring a hamburger menu for mobile, two buttons, a quote, and a pop-up cookie consent box that can be closed.
-An information page about the movie, including an image.
-A cast and crew page with a scrollable image gallery and a link for more production details.
-A ticket reservation page, also scrollable, including a form for user information.
-Each page contains a footer and a navigation bar (for desktop and tablet).
+## Type Support for `.vue` Imports in TS
 
-We created an SVG image, which we applied to all pages except the homepage.
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-For the overall design approach, we started with a mobile-first strategy, as it’s easier to begin with the smallest prototype. Once we were satisfied with the mobile version, we scaled up to tablet. During this process, we discussed design adjustments and how to proceed. For example, we decided to remove the sidebar and hamburger menu for larger screens, opting instead for a top navigation bar, which provided a clean and structured look.
+## Customize configuration
 
-After completing the tablet prototype, we followed a similar process for the desktop version.
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-To streamline our workflow, we took advantage of Figma's component system. From the start, we created reusable components for all pages. This allowed us to make quick design changes, such as updating a button style, across the entire project efficiently.
+## Project Setup
 
-// KEJSARTARMARINERNA
+```sh
+pnpm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+pnpm dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+pnpm build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+pnpm lint
+```

@@ -1,12 +1,32 @@
 <script lang="ts" setup>
+import { ref } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
+
+const hamburgerBtn = ref (document.querySelector('hamburgerBtn'));
+const isActive = ref(false);
+
+function toggleHamburgerMenu(){
+
+
+ isActive.value = !isActive.value;
+}
+
 
 </script>
 
 <template>
-  <div class="wrapper">
 
-<h2>Menu</h2>
+<div class="hamburger-container">
+  <button id="hamburgerbBtn" class="hamburger" @click="toggleHamburgerMenu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+</div>
+
+<div :class="['menu-open-wrapper', { 'active': isActive }]">
+
+<h2 class="menu-open-heading">Menu</h2>
 
 <nav class="nav-links">
   <RouterLink class="router-link" to="/">Home</RouterLink>
@@ -19,21 +39,23 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style lang="scss" scoped>
-.wrapper{
-  background-color: black;
+
+.menu-open-wrapper{
+  background-color: $black;
   width: 80%;
   height: 100vh;
-  color: white;
+  color: $white;
+  display: none;
+}
+
+.menu-open-heading{
+  text-align: center;
 }
 
 .nav-links{
-
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;
-
-
-
 
 }
 
@@ -45,6 +67,34 @@ import { RouterLink, RouterView } from 'vue-router'
   padding-bottom: 10px;
   padding-left: 1rem;
 }
+
+.hamburger{
+  width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 3;
+}
+
+.hamburger-line{
+  display: block;
+    width: 37px;
+    height: 2px;
+    background-color: $white;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.active{
+  display: block;
+  position: fixed;
+
+}
+
 
 </style>
 

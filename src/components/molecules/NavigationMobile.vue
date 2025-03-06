@@ -38,9 +38,13 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 .router-link{
-  color: white;
+  color: $white;
   text-decoration: none;
-  border-bottom: solid white 1px;
+  border-bottom: solid $white 1px;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  padding-left: 1rem;
 }
+
 </style>
 

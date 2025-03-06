@@ -11,13 +11,14 @@ const days = ref<Day[]>([]);
 
 const generateDates = (): void => {
   const today = new Date();
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 5; i++) { // Everytime i is less than 5, we generate a new bookingCard, IE we generate 5 days worth of bookings.
     const date = new Date();
     date.setDate(today.getDate() + i);
 
     days.value.push({
-      date: date.toISOString().split('T')[0],
-      display: date.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' })
+      date: date.toISOString().split('T')[0], // This separates the date from time, so date is only time. 
+      display: date.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }) 
+      // This formats the date according to region (in this case EN-GB) for display.
     });
   }
 };

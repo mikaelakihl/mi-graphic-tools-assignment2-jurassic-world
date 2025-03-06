@@ -29,9 +29,9 @@ generateDates();
 <template>
   <div class="bookingCard-wrapper">
     <div v-for="day in days" :key="day.date" class="bookingCard">
-      <h2>{{ day.display }}</h2>
-      <p>6:00 PM</p>
-      <p>Salon 8, Dolby Theatre</p>
+      <h2 class="bookingDate">{{ day.display }}</h2>
+      <p class="bookingTime">6:00 PM</p>
+      <p class="bookingLocation">Salon 8, Dolby Theatre</p>
       <BookBtn />
     </div>
   </div>

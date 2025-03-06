@@ -24,7 +24,7 @@ function toggleHamburgerMenu(){
   </button>
 </div>
 
-<div :class="['menu-open-wrapper', { 'active': isActive }]">
+<div :class="['menu-open-wrapper', { 'active': isActive}]">
 
 <h2 class="menu-open-heading">Menu</h2>
 
@@ -66,7 +66,10 @@ function toggleHamburgerMenu(){
   margin-bottom: 50px;
   padding-bottom: 10px;
   padding-left: 1rem;
+
+
 }
+
 
 .hamburger{
   width: 50px;
@@ -86,7 +89,8 @@ function toggleHamburgerMenu(){
     background-color: $white;
     border-radius: 6px;
     margin-bottom: 10px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+
 }
 
 .active{
@@ -94,6 +98,8 @@ function toggleHamburgerMenu(){
   position: fixed;
 
 }
+
+
 
 
 </style>

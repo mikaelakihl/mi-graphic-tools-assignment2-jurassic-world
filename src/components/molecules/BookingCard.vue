@@ -64,6 +64,24 @@ generateDates();
     }
   }
 }
-  
 
+@media (min-width: 1440px) { 
+  .bookingCard-wrapper {
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 50vh;
+
+    .bookingCard {
+      width: 86.25rem;
+      height: 7.5rem;
+      justify-content: space-around;
+      flex-direction: row;
+      margin: 0.5625rem auto;
+
+      button {
+        margin-top: 0;
+      }
+    }
+  }
+ }
 </style>

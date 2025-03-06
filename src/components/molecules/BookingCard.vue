@@ -1,17 +1,47 @@
 <script setup lang="ts">
 import BookBtn from '../atoms/BookBtn.vue';
+import { ref } from 'vue';
+
+interface Day {
+  date: string;
+  display: string;
+}
+
+const days = ref<Day[]>([]);
+
+const generateDates = (): void => {
+  const today = new Date();
+  for (let i = 0; i < 5; i++) {
+    const date = new Date();
+    date.setDate(today.getDate() + i);
+
+    days.value.push({
+      date: date.toISOString().split('T')[0],
+      display: date.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' })
+    });
+  }
+};
+
+generateDates();
 </script>
 
 <template>
-  <div class="bookingCard">
-    <h2>Thursday, March 6</h2>
-    <p>6:00 PM</p>
-    <p>Salon 8, Dolby Theatre</p>
-    <BookBtn />
+  <div class="bookingCard-wrapper">
+    <div v-for="day in days" :key="day.date" class="bookingCard">
+      <h2>{{ day.display }}</h2>
+      <p>6:00 PM</p>
+      <p>Salon 8, Dolby Theatre</p>
+      <BookBtn />
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.bookingCard-wrapper {
+  display: flex;
+  max-width: 100vw;
+  overflow-x: auto;
+  white-space: nowrap;
   .bookingCard {
     font-family: $primary-font;
     display: flex;
@@ -32,5 +62,7 @@ import BookBtn from '../atoms/BookBtn.vue';
       margin-top: 2rem;
     }
   }
+}
+  
 
 </style>

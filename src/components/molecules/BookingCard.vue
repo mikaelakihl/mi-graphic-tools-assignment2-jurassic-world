@@ -16,7 +16,7 @@ const generateDates = (): void => {
     date.setDate(today.getDate() + i);
 
     days.value.push({
-      date: date.toISOString().split('T')[0], // This separates the date from time, so date is only time. 
+      date: date.toISOString().split('T')[0], // This separates the date from time, so the variable date is only date. 
       display: date.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }) 
       // This formats the date according to region (in this case EN-GB) for display.
     });

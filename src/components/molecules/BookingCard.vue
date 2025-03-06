@@ -16,7 +16,7 @@ import BookBtn from '../atoms/BookBtn.vue';
     font-family: $primary-font;
     display: flex;
     flex-direction: column;
-    margin: 1.5625rem;
+    margin: 1rem;
     padding: 1.5625rem;
     background-color: $lightgreen;
     align-items: center;

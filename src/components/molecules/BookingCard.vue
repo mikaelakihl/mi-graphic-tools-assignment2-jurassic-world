@@ -11,7 +11,7 @@ const days = ref<Day[]>([]);
 
 const generateDates = (): void => {
   const today = new Date();
-  for (let i = 0; i < 5; i++) { // Everytime i is less than 5, we generate a new bookingCard, IE we generate 5 days worth of bookings.
+  for (let i = 1; i < 6; i++) { // Everytime i is less than 5, we generate a new bookingCard, IE we generate 5 days worth of bookings.
     const date = new Date();
     date.setDate(today.getDate() + i);
 
@@ -69,7 +69,7 @@ generateDates();
   .bookingCard-wrapper {
     flex-direction: column;
     overflow-y: auto;
-    max-height: 50vh;
+    max-height: 40vh;
 
     .bookingCard {
       width: 86.25rem;

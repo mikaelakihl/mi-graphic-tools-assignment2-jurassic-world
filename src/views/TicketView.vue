@@ -15,6 +15,6 @@ import BookingCard from '@/components/molecules/BookingCard.vue';
   }
   .ticket {
   background-color: black;
-  height: 100vh;
+  height: 98vh;
 }
 </style>

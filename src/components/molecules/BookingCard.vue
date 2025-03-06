@@ -13,6 +13,7 @@ import BookBtn from '../atoms/BookBtn.vue';
 
 <style lang="scss" scoped>
   .bookingCard {
+    font-family: $primary-font;
     display: flex;
     flex-direction: column;
     margin: 1.5625rem;

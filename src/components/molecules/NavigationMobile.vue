@@ -52,6 +52,7 @@ function toggleHamburgerMenu(){
 
 .menu-open-wrapper.active{
   display: block;
+  z-index: 1;
 }
 
 .menu-open-heading{
@@ -76,6 +77,11 @@ function toggleHamburgerMenu(){
 
 }
 
+.menu-container{
+  position: relative;
+  width: 80%;
+}
+
 .hamburger-container{
   position: relative;
 
@@ -88,7 +94,7 @@ function toggleHamburgerMenu(){
     border: 0;
     left: 20px;
     top: 20px;
-    z-index: 3;
+    z-index: 2;
     position: absolute;
 
 }
@@ -105,8 +111,9 @@ function toggleHamburgerMenu(){
 }
 
 .hamburger.active{
-  right:180px;
-  left: auto;
+  right:20px;
+  left:unset;
+
 
 }
 
@@ -114,7 +121,6 @@ function toggleHamburgerMenu(){
 .hamburger.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg);
   position: absolute;
-  background-color: blue;
 
 }
 
@@ -125,7 +131,6 @@ function toggleHamburgerMenu(){
 .hamburger.active .hamburger-line:nth-child(3) {
   transform: rotate(-45deg);
   position: absolute;
-  background-color: red;
   top: 20px;
 
 }

@@ -2,7 +2,6 @@
 import { ref } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
 
-const hamburgerBtn = ref (document.querySelector('hamburgerBtn'));
 const isActive = ref(false);
 
 function toggleHamburgerMenu(){
@@ -15,9 +14,9 @@ function toggleHamburgerMenu(){
 </script>
 
 <template>
-
+<div class="menu-container">
 <div class="hamburger-container">
-  <button id="hamburgerbBtn" class="hamburger" @click="toggleHamburgerMenu">
+  <button :class="['hamburger', { 'active': isActive}]" @click="toggleHamburgerMenu">
     <span class="hamburger-line"></span>
     <span class="hamburger-line"></span>
     <span class="hamburger-line"></span>
@@ -35,6 +34,7 @@ function toggleHamburgerMenu(){
   <RouterLink class="router-link" to="/cast">Cast</RouterLink>
 </nav>
 </div>
+</div>
 <RouterView />
 </template>
 
@@ -46,6 +46,12 @@ function toggleHamburgerMenu(){
   height: 100vh;
   color: $white;
   display: none;
+  position: fixed;
+  margin-top: 0;
+}
+
+.menu-open-wrapper.active{
+  display: block;
 }
 
 .menu-open-heading{
@@ -70,16 +76,21 @@ function toggleHamburgerMenu(){
 
 }
 
+.hamburger-container{
+  position: relative;
+
+}
 
 .hamburger{
   width: 50px;
     height: 50px;
     background: transparent;
     border: 0;
-    position: fixed;
     left: 20px;
     top: 20px;
     z-index: 3;
+    position: absolute;
+
 }
 
 .hamburger-line{
@@ -93,13 +104,31 @@ function toggleHamburgerMenu(){
 
 }
 
-.active{
-  display: block;
-  position: fixed;
+.hamburger.active{
+  right:180px;
+  left: auto;
 
 }
 
 
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  background-color: blue;
+
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0; /* Den mellersta linjen försvinner */
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  background-color: red;
+  top: 20px;
+
+}
 
 
 </style>

@@ -5,6 +5,7 @@ import AppFooter from './components/molecules/AppFooter.vue'
 
 <template>
   <header>
+
     <div class="header-wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>

@@ -1,29 +1,34 @@
 <script setup lang="ts">
-import BookBtn from '../atoms/BookBtn.vue';
-import { ref } from 'vue';
+import BookBtn from '../atoms/BookBtn.vue'
+import { ref } from 'vue'
 
 interface Day {
-  date: string;
-  display: string;
+  date: string
+  display: string
 }
 
-const days = ref<Day[]>([]);
+const days = ref<Day[]>([])
 
 const generateDates = (): void => {
-  const today = new Date();
-  for (let i = 1; i < 6; i++) { // Everytime i is less than 5, we generate a new bookingCard, IE we generate 5 days worth of bookings.
-    const date = new Date();
-    date.setDate(today.getDate() + i);
+  const today = new Date()
+  for (let i = 1; i < 6; i++) {
+    // Everytime i is less than 5, we generate a new bookingCard, IE we generate 5 days worth of bookings.
+    const date = new Date()
+    date.setDate(today.getDate() + i)
 
     days.value.push({
-      date: date.toISOString().split('T')[0], // This separates the date from time, so the variable date is only date. 
-      display: date.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }) 
+      date: date.toISOString().split('T')[0], // This separates the date from time, so the variable date is only date.
+      display: date.toLocaleDateString('en-GB', {
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short',
+      }),
       // This formats the date according to region (in this case EN-GB) for display.
-    });
+    })
   }
-};
+}
 
-generateDates();
+generateDates()
 </script>
 
 <template>
@@ -65,7 +70,7 @@ generateDates();
   }
 }
 
-@media (min-width: 1440px) { 
+@media (min-width: 1440px) {
   .bookingCard-wrapper {
     flex-direction: column;
     overflow-y: auto;
@@ -83,5 +88,5 @@ generateDates();
       }
     }
   }
- }
+}
 </style>

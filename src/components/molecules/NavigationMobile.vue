@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue';
+import { RouterLink, RouterView } from 'vue-router';
 
-const isActive = ref(false)
+const isActive = ref(false);
 
 function toggleHamburgerMenu() {
   isActive.value = !isActive.value
@@ -28,6 +28,9 @@ function toggleHamburgerMenu() {
         </div>
         <div class="router-link-wrapper">
           <RouterLink class="router-link" to="/about">About</RouterLink>
+        </div>
+        <div class="router-link-wrapper router-link-wrapper-icon">
+          <img class="router-link router-link-icon" src="/assets/svg/JurassicWorld.svg" />
         </div>
         <div class="router-link-wrapper">
           <RouterLink class="router-link" to="/tickets">Tickets</RouterLink>
@@ -64,7 +67,6 @@ function toggleHamburgerMenu() {
 }
 
 .nav-links {
-  display: flex;
   flex-direction: column;
   padding-bottom: 0.625rem;
 }
@@ -132,5 +134,41 @@ function toggleHamburgerMenu() {
   position: absolute;
   top: 1.25rem;
   height: 0.25rem;
+}
+
+.router-link-wrapper-icon {
+  display: none;
+}
+// ------------Tablet navigation-----------
+
+@media (min-width: 800px) {
+  .menu-open-wrapper {
+    display: block;
+    height: 118px;
+    width: 100%;
+  }
+  .menu-open-heading {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .router-link-wrapper {
+    border-bottom: none;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-direction: row;
+    align-items: center;
+
+    .router-link-wrapper:nth-child(4) {
+      grid-column: 4;
+    }
+  }
 }
 </style>

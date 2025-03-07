@@ -9,3 +9,23 @@ body {
 .header-wrapper {
   background-color: $black;
 }
+
+// INPUTS
+
+input:not([type="checkbox"]) {
+  background-color: $white;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+}
+
+input[type="checkbox"] {
+  background-color: $white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 24px;
+  width: 24px;
+}

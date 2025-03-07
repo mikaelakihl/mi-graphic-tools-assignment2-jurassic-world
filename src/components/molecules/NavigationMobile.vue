@@ -28,10 +28,18 @@ function toggleHamburgerMenu(){
 <h2 class="menu-open-heading">Menu</h2>
 
 <nav class="nav-links">
+  <div class="router-link-wrapper">
   <RouterLink class="router-link" to="/">Home</RouterLink>
+  </div>
+  <div class="router-link-wrapper">
   <RouterLink class="router-link" to="/about">About</RouterLink>
+</div>
+<div class="router-link-wrapper">
   <RouterLink class="router-link" to="/tickets">Tickets</RouterLink>
+</div>
+<div class="router-link-wrapper">
   <RouterLink class="router-link" to="/cast">Cast</RouterLink>
+</div>
 </nav>
 </div>
 </div>

@@ -3,19 +3,19 @@
 </template>
 
 <style lang="scss" scoped>
-  button {
-    width: 117px;
-    height: 47px;
-    background-color: $yellow;
-    padding: 0.5rem;
-    border: 0;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: 400;
-    box-shadow: 0px 4px 4px 0px #00000040; 
+button {
+  width: 117px;
+  height: 47px;
+  background-color: $yellow;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  box-shadow: 0px 4px 4px 0px #00000040;
 
-    &:active {
-      background-color: $lightyellow;
-    }
+  &:active {
+    background-color: $lightyellow;
   }
+}
 </style>

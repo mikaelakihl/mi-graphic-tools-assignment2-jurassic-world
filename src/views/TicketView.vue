@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BookingCard from '@/components/molecules/BookingCard.vue';
+import BookingCard from '@/components/molecules/BookingCard.vue'
 </script>
 
 <template>
@@ -10,10 +10,10 @@ import BookingCard from '@/components/molecules/BookingCard.vue';
 </template>
 
 <style lang="scss" scoped>
-  h1 {
-    color:$red;
-  }
-  .ticket {
+h1 {
+  color: $red;
+}
+.ticket {
   background-color: black;
   height: 98vh;
 }

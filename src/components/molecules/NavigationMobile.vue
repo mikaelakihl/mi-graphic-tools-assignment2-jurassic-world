@@ -29,7 +29,7 @@ function toggleHamburgerMenu(){
 
 <nav class="nav-links">
   <div class="router-link-wrapper">
-  <RouterLink class="router-link" to="/">Home</RouterLink>
+    <RouterLink class="router-link" to="/">Home</RouterLink>
   </div>
   <div class="router-link-wrapper">
   <RouterLink class="router-link" to="/about">About</RouterLink>
@@ -55,7 +55,8 @@ function toggleHamburgerMenu(){
   color: $white;
   display: none;
   position: fixed;
-  margin-top: 0;
+  top: 0;
+  border-right: solid 0.0625rem $white;
 }
 
 .menu-open-wrapper.active{
@@ -64,31 +65,37 @@ function toggleHamburgerMenu(){
 }
 
 .menu-open-heading{
+  margin-top: 7rem;
   text-align: center;
 }
 
 .nav-links{
   display: flex;
   flex-direction: column;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
 
+}
+
+.router-link-wrapper{
+  border-bottom: solid $white 1px;
+   height: 3.75rem;
+  display: flex;
+  align-items: center;
 }
 
 .router-link{
   color: $white;
   text-decoration: none;
-  border-bottom: solid $white 1px;
-  margin-bottom: 50px;
-  padding-bottom: 10px;
   padding-left: 1rem;
-
 
 }
 
 .menu-container{
   position: relative;
   width: 80%;
+
 }
+
 
 .hamburger-container{
   position: relative;
@@ -96,12 +103,12 @@ function toggleHamburgerMenu(){
 }
 
 .hamburger{
-  width: 50px;
-    height: 50px;
+  width: 3.125rem;
+    height: 3.125rem;
     background: transparent;
     border: 0;
-    left: 20px;
-    top: 20px;
+    left: 2.25rem;
+    top: 1.125rem;
     z-index: 2;
     position: absolute;
 
@@ -109,17 +116,17 @@ function toggleHamburgerMenu(){
 
 .hamburger-line{
   display: block;
-    width: 37px;
-    height: 2px;
+    width: 2.3125rem;
+    height: 0.125rem;
     background-color: $white;
-    border-radius: 6px;
-    margin-bottom: 10px;
+    border-radius:  0.375rem;
+    margin-bottom: 0.625rem;
     transition: all 0.3s ease-in-out
 
 }
 
 .hamburger.active{
-  right:20px;
+  right:1.25rem;
   left:unset;
 
 
@@ -129,6 +136,7 @@ function toggleHamburgerMenu(){
 .hamburger.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg);
   position: absolute;
+  height: 0.25rem;
 
 }
 
@@ -139,7 +147,8 @@ function toggleHamburgerMenu(){
 .hamburger.active .hamburger-line:nth-child(3) {
   transform: rotate(-45deg);
   position: absolute;
-  top: 20px;
+  top: 1.25rem;
+  height: 0.25rem;
 
 }
 

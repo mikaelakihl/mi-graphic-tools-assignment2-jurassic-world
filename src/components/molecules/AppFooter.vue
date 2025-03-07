@@ -4,9 +4,9 @@
 <template>
     <div class="wrapper">
         <div class="icon-wrapper">
-            <img src="/assets/facebookIcon.jpg" />
-            <img src="/assets/InstagramIcon.jpg" />
-            <img src="/assets/youtubeIcon.jpg" />
+            <img src="/assets/icons/facebook-icon.jpg" />
+            <img src="/assets/icons/InstagramIcon.jpg" />
+            <img src="/assets/icons/youtube-icon.jpg" />
         </div>
         <div class="p-wrapper">
             <p class="upper">Movie platform © 2025 Powster </p>

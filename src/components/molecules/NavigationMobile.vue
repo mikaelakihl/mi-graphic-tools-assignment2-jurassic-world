@@ -99,7 +99,7 @@ function toggleHamburgerMenu() {
   left: 2.25rem;
   top: 1.125rem;
   z-index: 2;
-  position: absolute;
+  position: relative;
 }
 
 .hamburger-line {
@@ -113,8 +113,8 @@ function toggleHamburgerMenu() {
 }
 
 .hamburger.active {
-  right: 1.25rem;
-  left: unset;
+  // right: 1.25rem;
+  left: 22rem;
 }
 
 .hamburger.active .hamburger-line:nth-child(1) {

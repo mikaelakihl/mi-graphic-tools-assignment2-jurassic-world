@@ -12,7 +12,7 @@
 <style lang="scss" scoped>
 .home {
   background-color: black;
-  height: 88.5vh;
+  height: 89vh;
 
   .image-container {
     text-align: center;

@@ -2,7 +2,7 @@
 
 body {
   background-color: $grey;
-  font-family: $primary-font;
+  @include h4;
 }
 
 .header-wrapper {

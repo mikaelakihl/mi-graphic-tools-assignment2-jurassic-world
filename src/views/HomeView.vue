@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TheButton from '@/components/atoms/TheButton.vue';
+import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import TheButton from '@/components/atoms/TheButton.vue';
         <p class="quote-giver">-Dino Saar</p>
       </blockquote>
     </div>
+    <CookiesBanner />
   </div>
 </template>
 

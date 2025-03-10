@@ -39,8 +39,8 @@
 
   p {
     color: $white;
-    font-family: $secondary-font;
-    font-size: rem(6);
+    @include h2;
+    font-size: 6px;
   }
 }
 

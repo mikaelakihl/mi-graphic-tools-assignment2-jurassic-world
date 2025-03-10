@@ -49,11 +49,21 @@ function toggleHamburgerMenu() {
         </div>
       </nav>
     </div>
+
   </div>
+  <div class="router-link-icon-mobile-wrapper">
+      <img
+          v-if="ShouldShowSvg"
+          class="router-link router-link-icon router-link-icon-mobile"
+          src="/assets/svg/JurassicWorld.svg"
+          height="115px"
+          />
+    </div>
   <RouterView />
 </template>
 
 <style lang="scss" scoped>
+
 .menu-container {
   position: relative;
   width: 80%;
@@ -148,6 +158,17 @@ function toggleHamburgerMenu() {
 
 .router-link-wrapper-icon {
   display: none;
+}
+
+.router-link-icon-mobile-wrapper{
+  display: flex;
+  justify-content: right;
+  height: 100px;
+
+  .router-link-icon-mobile{
+    height: 80px;
+  }
+
 }
 
 // ------------Tablet/desktop navigation-----------

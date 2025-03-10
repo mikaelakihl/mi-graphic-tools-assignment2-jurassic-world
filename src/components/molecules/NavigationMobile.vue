@@ -1,8 +1,12 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { RouterLink, RouterView } from 'vue-router';
+import { computed, ref } from 'vue';
+import { RouterLink, RouterView, useRoute } from 'vue-router';
 
 const isActive = ref(false);
+const route = useRoute();
+const ShouldShowSvg = computed(()=> {
+  return route.path!== '/';
+});
 
 function toggleHamburgerMenu() {
   isActive.value = !isActive.value
@@ -31,6 +35,7 @@ function toggleHamburgerMenu() {
         </div>
         <div class="router-link-wrapper router-link-wrapper-icon">
           <img
+            v-if="ShouldShowSvg"
             class="router-link router-link-icon"
             src="/assets/svg/JurassicWorld.svg"
             height="115px"

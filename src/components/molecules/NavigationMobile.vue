@@ -30,7 +30,7 @@ function toggleHamburgerMenu() {
           <RouterLink class="router-link" to="/about">About</RouterLink>
         </div>
         <div class="router-link-wrapper router-link-wrapper-icon">
-          <img class="router-link router-link-icon" src="/assets/svg/JurassicWorld.svg" />
+          <img class="router-link router-link-icon" src="/assets/svg/JurassicWorld.svg" height="115px" />
         </div>
         <div class="router-link-wrapper">
           <RouterLink class="router-link" to="/tickets">Tickets</RouterLink>
@@ -45,6 +45,12 @@ function toggleHamburgerMenu() {
 </template>
 
 <style lang="scss" scoped>
+
+.menu-container {
+  position: relative;
+  width: 80%;
+
+}
 .menu-open-wrapper {
   background-color: $black;
   width: 80%;
@@ -54,6 +60,7 @@ function toggleHamburgerMenu() {
   position: fixed;
   top: 0;
   border-right: solid 0.0625rem $white;
+
 }
 
 .menu-open-wrapper.active {
@@ -77,25 +84,22 @@ function toggleHamburgerMenu() {
   height: 3.75rem;
   display: flex;
   align-items: center;
-}
 
-.router-link {
+  .router-link {
   text-decoration: none;
   padding-left: 1rem;
   @include h4;
   color: $white;
 }
 
-.menu-container {
-  position: relative;
-  width: 80%;
 }
+
+
 
 .hamburger-container {
   position: relative;
-}
 
-.hamburger {
+  .hamburger {
   width: 3.125rem;
   height: 3.125rem;
   background: transparent;
@@ -104,9 +108,8 @@ function toggleHamburgerMenu() {
   top: 1.125rem;
   z-index: 2;
   position: absolute;
-}
 
-.hamburger-line {
+  .hamburger-line {
   display: block;
   width: 2.3125rem;
   height: 0.125rem;
@@ -114,6 +117,8 @@ function toggleHamburgerMenu() {
   border-radius: 0.375rem;
   margin-bottom: 0.625rem;
   transition: all 0.3s ease-in-out;
+}
+
 }
 
 .hamburger.active {
@@ -138,10 +143,14 @@ function toggleHamburgerMenu() {
   height: 0.25rem;
 }
 
+
+}
+
 .router-link-wrapper-icon {
   display: none;
 }
-// ------------Tablet navigation-----------
+
+// ------------Tablet/desktop navigation-----------
 
 @media (min-width: 800px) {
 
@@ -191,7 +200,7 @@ function toggleHamburgerMenu() {
   .router-link-icon{
     max-width: 100%;
 
-    }
   }
+}
 }
 </style>

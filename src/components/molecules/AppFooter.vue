@@ -1,18 +1,18 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="wrapper">
-    <div class="icon-wrapper">
-      <img src="/assets/facebookIcon.jpg" />
-      <img src="/assets/InstagramIcon.jpg" />
-      <img src="/assets/youtubeIcon.jpg" />
+    <div class="wrapper">
+      <div class="icon-wrapper">
+          <img src="/assets/icons/facebook-icon.jpg" />
+          <img src="/assets/icons/InstagramIcon.jpg" />
+          <img src="/assets/icons/youtube-icon.jpg" />
+      </div>
+      <div class="p-wrapper">
+          <p class="upper">Movie platform © 2025 Powster </p>
+          <p>© 2025 Universal Pictures. <span class="upper">All rights reserved.</span></p>
+          <p>In Theaters July 2, 2025.</p>
+      </div>
     </div>
-    <div class="p-wrapper">
-      <p class="upper">Movie platform © 2025 Powster</p>
-      <p>© 2025 Universal Pictures. <span class="upper">All rights reserved.</span></p>
-      <p>In Theaters July 2, 2025.</p>
-    </div>
-  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -20,8 +20,8 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  min-height: 50px;
   height: 5vh;
+  min-height: rem(50);
   background-color: $lightgreen;
 }
 
@@ -42,7 +42,7 @@
 
   p {
     color: $white;
-    font-family: $secondary-font;
+    @include h2;
     font-size: 6px;
   }
 }
@@ -52,8 +52,8 @@
 }
 
 img {
-  max-width: 20px;
-  max-height: 20px;
+  max-width: rem(20);
+  max-height: rem(20);
 }
 
 @media (min-width: 600px) {
@@ -62,15 +62,15 @@ img {
   }
 
   img {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: rem(30);
+    max-height: rem(30);
   }
 }
 
 @media (min-width: 1024px) {
   img {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: rem(40);
+    max-height: rem(40);
   }
 }
 </style>

@@ -49,7 +49,6 @@ generateDates()
   overflow-x: auto;
   white-space: nowrap;
   .bookingCard {
-    font-family: $primary-font;
     display: flex;
     flex-direction: column;
     margin: 1rem;
@@ -67,6 +66,18 @@ generateDates()
     button {
       margin-top: 2rem;
     }
+  }
+
+  .bookingDate{
+    @include h2;
+  }
+
+  .bookingTime{
+    @include quote;
+  }
+
+  .bookingLocation{
+    @include h3;
   }
 }
 

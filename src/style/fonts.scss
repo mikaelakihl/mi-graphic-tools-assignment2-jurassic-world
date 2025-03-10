@@ -1,6 +1,37 @@
 // ---------- FONTS ----------
 
-// TODO: ADD CORRECT FONTS HERE
+@mixin h1{
+    font-family: 'Suez One', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
 
-$primary-font: 'Inter', sans-serif; // NOT CORRECT
-$secondary-font: 'Josefin Sans', sans-serif;
+@mixin h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@mixin h3{
+    font-family: 'Josefin Slab', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@mixin h4{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@mixin quote{
+    font-family: 'Josefin Slab', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+@mixin paragraph{
+    font-family: 'Josefin Slab', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}

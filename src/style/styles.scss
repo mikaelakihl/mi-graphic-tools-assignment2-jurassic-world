@@ -11,7 +11,7 @@ body {
 
 // INPUTS
 
-input:not([type="checkbox"]) {
+input:not([type="checkbox"]) { // All inputs but checkboxes
   background-color: $white;
   color: $black;
   padding: 10px;
@@ -20,10 +20,12 @@ input:not([type="checkbox"]) {
   border-radius: 5px;
   height: 50px;
   text-align: center;
+  transition: background-color 0.3s ease;
+
 }
 
 input[type="checkbox"] {
-  appearance: none; // Tar bort standardutseendet
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 
@@ -50,4 +52,9 @@ input[type="checkbox"]:checked::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -48%);
+}
+
+input:disabled {
+  background-color: $lightgrey;
+  color: $black;
 }

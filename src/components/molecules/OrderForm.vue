@@ -144,7 +144,13 @@ const resetForm = () => {
           buttonText="Proceed"
           :disabled="isProceedDisabled"
         />
-        <TheButton type="button" class="cancel-btn" buttonText="Cancel" @click="resetForm" />
+        <TheButton
+          type="button"
+          class="cancel-btn"
+          buttonText="Cancel"
+          @click="resetForm"
+          :disabled="!props.formEnabled"
+        />
       </div>
     </form>
   </section>
@@ -211,6 +217,9 @@ section {
       button {
         margin: 0;
         width: clamp(45px, 10vw, 80px);
+        &:disabled {
+          background-color: $lightgrey;
+        }
       }
     }
     .form-container:nth-child(6) {
@@ -240,7 +249,6 @@ section {
 
   &:disabled {
     background-color: $grey;
-    color: $black;
   }
 }
 
@@ -256,6 +264,10 @@ section {
   &:active {
     background-color: $lightred;
     transition: background-color 0s;
+  }
+
+  &:disabled {
+    background-color: $grey;
   }
 }
 </style>

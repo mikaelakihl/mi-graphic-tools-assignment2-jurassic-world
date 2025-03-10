@@ -144,9 +144,10 @@ function toggleHamburgerMenu() {
 // ------------Tablet navigation-----------
 
 @media (min-width: 800px) {
+
   .menu-open-wrapper {
     display: block;
-    height: 118px;
+    height: 120px;
     width: 100%;
   }
   .menu-open-heading {
@@ -160,6 +161,7 @@ function toggleHamburgerMenu() {
   .router-link-wrapper {
     border-bottom: none;
     justify-content: center;
+    height: auto;
   }
 
   .nav-links {
@@ -170,6 +172,25 @@ function toggleHamburgerMenu() {
 
     .router-link-wrapper:nth-child(4) {
       grid-column: 4;
+    }
+
+
+
+  }
+
+  .router-link-wrapper-icon {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  .router-link{
+    padding-left: 0;
+  }
+
+  .router-link-icon{
+    max-width: 100%;
+
     }
   }
 }

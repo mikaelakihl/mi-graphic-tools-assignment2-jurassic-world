@@ -16,13 +16,12 @@ defineProps({
         border-radius: 8px;
         margin: 0.2rem;
         background-color: #D9D9D9;
-        font-size: 1.25rem;
-        font-family: $secondary-font;
+        @include h2;
 
         &:hover {
             background-color: $yellow;
         }
-        
+
         &:active {
             background-color: $red;
         }

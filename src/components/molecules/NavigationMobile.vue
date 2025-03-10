@@ -177,6 +177,7 @@ function toggleHamburgerMenu() {
     grid-template-columns: repeat(5, 1fr);
     flex-direction: row;
     align-items: center;
+    height: 120px;
 
     .router-link-wrapper:nth-child(4) {
       grid-column: 4;

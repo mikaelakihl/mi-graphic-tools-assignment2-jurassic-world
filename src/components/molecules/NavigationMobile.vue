@@ -64,6 +64,7 @@ function toggleHamburgerMenu() {
 .menu-open-heading {
   margin-top: 7rem;
   text-align: center;
+  @include h1;
 }
 
 .nav-links {
@@ -79,9 +80,10 @@ function toggleHamburgerMenu() {
 }
 
 .router-link {
-  color: $white;
   text-decoration: none;
   padding-left: 1rem;
+  @include h4;
+  color: $white;
 }
 
 .menu-container {

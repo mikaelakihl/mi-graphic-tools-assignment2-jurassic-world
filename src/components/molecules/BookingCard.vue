@@ -68,15 +68,15 @@ generateDates()
     }
   }
 
-  .bookingDate{
+  .bookingDate {
     @include h2;
   }
 
-  .bookingTime{
+  .bookingTime {
     @include quote;
   }
 
-  .bookingLocation{
+  .bookingLocation {
     @include h3;
   }
 }

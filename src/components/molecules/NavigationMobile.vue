@@ -30,7 +30,11 @@ function toggleHamburgerMenu() {
           <RouterLink class="router-link" to="/about">About</RouterLink>
         </div>
         <div class="router-link-wrapper router-link-wrapper-icon">
-          <img class="router-link router-link-icon" src="/assets/svg/JurassicWorld.svg" height="115px" />
+          <img
+            class="router-link router-link-icon"
+            src="/assets/svg/JurassicWorld.svg"
+            height="115px"
+          />
         </div>
         <div class="router-link-wrapper">
           <RouterLink class="router-link" to="/tickets">Tickets</RouterLink>
@@ -45,11 +49,9 @@ function toggleHamburgerMenu() {
 </template>
 
 <style lang="scss" scoped>
-
 .menu-container {
   position: relative;
   width: 80%;
-
 }
 .menu-open-wrapper {
   background-color: $black;
@@ -60,7 +62,6 @@ function toggleHamburgerMenu() {
   position: fixed;
   top: 0;
   border-right: solid 0.0625rem $white;
-
 }
 
 .menu-open-wrapper.active {
@@ -86,64 +87,58 @@ function toggleHamburgerMenu() {
   align-items: center;
 
   .router-link {
-  text-decoration: none;
-  padding-left: 1rem;
-  @include h4;
-  color: $white;
+    text-decoration: none;
+    padding-left: 1rem;
+    @include h4;
+    color: $white;
+  }
 }
-
-}
-
-
 
 .hamburger-container {
   position: relative;
 
   .hamburger {
-  width: 3.125rem;
-  height: 3.125rem;
-  background: transparent;
-  border: 0;
-  left: 2.25rem;
-  top: 1.125rem;
-  z-index: 2;
-  position: absolute;
+    width: 3.125rem;
+    height: 3.125rem;
+    background: transparent;
+    border: 0;
+    left: 2.25rem;
+    top: 1.125rem;
+    z-index: 2;
+    position: absolute;
 
-  .hamburger-line {
-  display: block;
-  width: 2.3125rem;
-  height: 0.125rem;
-  background-color: $white;
-  border-radius: 0.375rem;
-  margin-bottom: 0.625rem;
-  transition: all 0.3s ease-in-out;
-}
+    .hamburger-line {
+      display: block;
+      width: 2.3125rem;
+      height: 0.125rem;
+      background-color: $white;
+      border-radius: 0.375rem;
+      margin-bottom: 0.625rem;
+      transition: all 0.3s ease-in-out;
+    }
+  }
 
-}
+  .hamburger.active {
+    right: 1.25rem;
+    left: unset;
+  }
 
-.hamburger.active {
-  right: 1.25rem;
-  left: unset;
-}
+  .hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    height: 0.25rem;
+  }
 
-.hamburger.active .hamburger-line:nth-child(1) {
-  transform: rotate(45deg);
-  position: absolute;
-  height: 0.25rem;
-}
+  .hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
 
-.hamburger.active .hamburger-line:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .hamburger-line:nth-child(3) {
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 1.25rem;
-  height: 0.25rem;
-}
-
-
+  .hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 1.25rem;
+    height: 0.25rem;
+  }
 }
 
 .router-link-wrapper-icon {
@@ -153,7 +148,6 @@ function toggleHamburgerMenu() {
 // ------------Tablet/desktop navigation-----------
 
 @media (min-width: 800px) {
-
   .menu-open-wrapper {
     display: block;
     height: 120px;
@@ -182,25 +176,21 @@ function toggleHamburgerMenu() {
     .router-link-wrapper:nth-child(4) {
       grid-column: 4;
     }
-
-
-
   }
 
   .router-link-wrapper-icon {
-  display: block;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 
-  .router-link{
-    padding-left: 0;
+    .router-link {
+      padding-left: 0;
+    }
+
+    .router-link-icon {
+      max-width: 100%;
+    }
   }
-
-  .router-link-icon{
-    max-width: 100%;
-
-  }
-}
 }
 </style>

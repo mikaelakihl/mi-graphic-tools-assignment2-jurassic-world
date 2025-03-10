@@ -7,7 +7,8 @@ import BookingCard from '@/components/molecules/BookingCard.vue';
   <div class="ticket">
     <BookingCard />
     <h1>This is the Tickets page</h1>
-    <TheButton button-text="Buy now"/> <!-- Placeholder example on how to use "TheButton" -->
+    <TheButton button-text="Buy now" />
+    <!-- Placeholder example on how to use "TheButton" -->
   </div>
 </template>
 

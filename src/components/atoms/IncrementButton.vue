@@ -4,30 +4,30 @@ defineProps({
 });
 </script>
 <template>
-<button>
+  <button>
     {{ buttonText }}
-</button>
+  </button>
 </template>
 <style lang="scss" scoped>
-    button {
-        height: 2.8125rem;
-        width: 2.8125rem;
-        border: none;
-        border-radius: 8px;
-        margin: 0.2rem;
-        background-color: #D9D9D9;
-        @include h2;
+button {
+  height: 2.8125rem;
+  width: 2.8125rem;
+  border: none;
+  border-radius: 8px;
+  margin: 0.2rem;
+  background-color: #d9d9d9;
+  @include h2;
 
-        &:hover {
-            background-color: $yellow;
-        }
+  &:hover {
+    background-color: $yellow;
+  }
 
-        &:active {
-            background-color: $lightgreen;
-        }
-    }
+  &:active {
+    background-color: $lightgreen;
+  }
+}
 
-    .active {
-        background-color: $lightyellow;
-    }
+.active {
+  background-color: $lightyellow;
+}
 </style>

@@ -17,10 +17,7 @@
 
 <style lang="scss" scoped>
 .wrapper {
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  height: 5vh;
   min-height: rem(50);
   background-color: $lightgreen;
 }

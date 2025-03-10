@@ -5,7 +5,7 @@ import TheButton from '@/components/atoms/TheButton.vue';
 <template>
   <div class="home">
     <div class="image-container">
-      <img src="\assets\JurassicLogo.jpg" alt="" width="390px" height="425px">
+      <img src="\assets\icons\jurassic-logo.jpg" alt="" width="390px" height="425px">
     </div>
     <h2 class="premier-text">Premiere 2 July</h2>
     <div class="button-container">
@@ -38,7 +38,7 @@ import TheButton from '@/components/atoms/TheButton.vue';
     text-align: center;
     margin: 0;
     margin-top: 1.5rem;
-    // @include h1; Not yet implemented
+    @include h1;
     color: $lightyellow;
   }
 
@@ -60,10 +60,10 @@ import TheButton from '@/components/atoms/TheButton.vue';
     width: 100%;
     margin: 0;
     margin-top: 1rem;
-    color: rgba(255, 255, 255, 0.35);;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 20px;
     font-style: italic;
-    // @include h3; not yet implemented 
+    @include h3;
       
     .quote-giver {
       text-align: right;
@@ -78,7 +78,8 @@ import TheButton from '@/components/atoms/TheButton.vue';
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .home {
-
+      max-height: 100vh;
+      overflow-y: auto;
     .image-container {
       width: 100%;
       height: auto;
@@ -90,27 +91,71 @@ import TheButton from '@/components/atoms/TheButton.vue';
     }
 
     h2 {
-      margin-top: -110px;
+      margin-top: -150px;
     }
 
     .button-container {
-      margin-top: 1rem;
+      margin-top: 2rem;
       gap: 6rem;
+
       .homepage-buttons {
+        width: 11.5625rem;
+        height: 2.9375rem;
       }
     }
     
-    .quote-container {
-        
+    .quote-container {  
       .quote-giver {
         margin-right: 7rem;
       }
 
       .quote-p {
+        text-align: right;
         width: 60%;
       }
     }
   }
 }
+
+@media (min-width: 1025px) {
+  .home {
+
+    .image-container {
+      height: 90%;
+      text-align: center;
+      img {
+        position: relative;
+        bottom: 5rem;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+    }
+
+h2 {
+  z-index: 1;
+  margin-top: -220px;
+}
+
+.button-container {
+
+  .homepage-buttons {
+    z-index: 1;
+  }
+}
+
+.quote-container {  
+  width: 47%;
+  .quote-giver {
+    text-align: right;
+  }
+
+  .quote-p {
+    width: 100%;
+  }
+}
+}
+}
+
 
 </style>

@@ -103,9 +103,15 @@ function toggleHamburgerMenu() {
 
   .router-link {
     text-decoration: none;
-    padding-left: 1rem;
+    margin-left: 1rem;
     @include h4;
     color: $white;
+
+    &:hover{
+      border-bottom: 1px solid $white;
+
+
+    }
   }
 }
 
@@ -191,6 +197,10 @@ function toggleHamburgerMenu() {
     border-bottom: none;
     justify-content: center;
     height: auto;
+
+    .router-link{
+      margin-left: 0;
+    }
   }
 
   .nav-links {
@@ -217,6 +227,9 @@ function toggleHamburgerMenu() {
 
     .router-link-icon {
       max-width: 100%;
+      &:hover{
+        border-bottom: none;
+      }
     }
   }
 }

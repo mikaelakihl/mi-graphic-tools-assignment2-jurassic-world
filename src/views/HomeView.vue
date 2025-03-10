@@ -24,7 +24,7 @@ import TheButton from '@/components/atoms/TheButton.vue';
 <style lang="scss" scoped>
 .home {
   background-color: black;
-  height: 85vh;
+  height: 84.1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,12 +78,14 @@ import TheButton from '@/components/atoms/TheButton.vue';
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .home {
-      max-height: 100vh;
+      height: 83vh;
+      max-height: 83vh;
       overflow-y: auto;
     .image-container {
       width: 100%;
       height: auto;
       text-align: center;
+      margin-top: 0;
       img {
         width: 70%;
         height: auto;
@@ -91,7 +93,7 @@ import TheButton from '@/components/atoms/TheButton.vue';
     }
 
     h2 {
-      margin-top: -150px;
+      margin-top: -175px;
     }
 
     .button-container {
@@ -119,7 +121,7 @@ import TheButton from '@/components/atoms/TheButton.vue';
 
 @media (min-width: 1025px) {
   .home {
-
+    height: 85vh;
     .image-container {
       height: 90%;
       text-align: center;

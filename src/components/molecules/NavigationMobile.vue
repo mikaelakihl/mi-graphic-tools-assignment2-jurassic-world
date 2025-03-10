@@ -84,22 +84,26 @@ function toggleHamburgerMenu() {
 
 .menu-container {
   position: relative;
-  width: 80%;
+  background-color: $black;
+  width: 100%;
 }
 
 .hamburger-container {
   position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .hamburger {
   width: 3.125rem;
   height: 3.125rem;
+  margin: 0.5rem 0 0 0.5rem;
   background: transparent;
   border: 0;
-  left: 2.25rem;
-  top: 1.125rem;
   z-index: 2;
-  position: relative;
 }
 
 .hamburger-line {
@@ -113,8 +117,9 @@ function toggleHamburgerMenu() {
 }
 
 .hamburger.active {
+  position: relative;
   // right: 1.25rem;
-  left: 22rem;
+  left: 20rem;
 }
 
 .hamburger.active .hamburger-line:nth-child(1) {

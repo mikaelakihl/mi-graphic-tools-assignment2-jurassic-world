@@ -1,66 +1,72 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, defineProps, defineEmits } from 'vue'
 import DecrementButton from '../atoms/DecrementButton.vue'
 import IncrementButton from '../atoms/IncrementButton.vue'
 import TheButton from '../atoms/TheButton.vue'
 
-// VARIABLES
-const ticketAmount = ref(0)
+const props = defineProps<{
+  ticketAmount: number
+  formEnabled: boolean
+}>()
 
+const emit = defineEmits(['update-ticket-amount'])
+
+// VARIABLES
+// const ticketAmount = ref(0)
 const nameInput = ref('')
 const emailInput = ref('')
 const phoneInput = ref('')
 const termsChecked = ref(false)
 
 // ADD AND REMOVE TICKETS
+// ADD AND REMOVE TICKETS
 const decrement = () => {
-  if (ticketAmount.value > 0) {
-    ticketAmount.value--
+  if (props.ticketAmount > 0) {
+    emit('update-ticket-amount', props.ticketAmount - 1)
   }
 }
 
 const increment = () => {
-  ticketAmount.value++
+  emit('update-ticket-amount', props.ticketAmount + 1)
 }
 
 const isProceedDisabled = computed(() => {
   return (
     nameInput.value.trim() === '' ||
     emailInput.value.trim() === '' ||
-    ticketAmount.value < 1 ||
+    props.ticketAmount < 1 || // Use props.ticketAmount
     !termsChecked.value
   )
 })
 
 // SUBMIT EVENT
 const submitForm = (event: Event) => {
-  event.preventDefault(); // Förhindra sidladdning
+  event.preventDefault()
   if (!isProceedDisabled.value) {
     console.log('Form Sent', {
       name: nameInput.value,
       email: emailInput.value,
       phone: phoneInput.value,
-      tickets: ticketAmount.value,
-      termsAccepted: termsChecked.value
-    });
+      tickets: props.ticketAmount, // Use props.ticketAmount
+      termsAccepted: termsChecked.value,
+    })
     resetForm()
   }
-};
+}
 
 // CANCEL EVENT
 const resetForm = () => {
   nameInput.value = ''
   emailInput.value = ''
   phoneInput.value = ''
-  ticketAmount.value = 0
+  emit('update-ticket-amount', 0)
   termsChecked.value = false
 }
-
 </script>
 
 <template>
   <section class="order-form">
-    <form @submit="submitForm">
+    <form @submit="submitForm" :class="{ disabled: !props.formEnabled }">
       <div class="form-container">
         <label>
           <span>Full Name</span>
@@ -70,6 +76,7 @@ const resetForm = () => {
             name="name"
             placeholder="Enter your full name"
             required
+            :disabled="!props.formEnabled"
           />
         </label>
       </div>
@@ -77,9 +84,19 @@ const resetForm = () => {
         <div class="ticket-amount-container">
           <span>Tickets</span>
           <div class="amount-buttons">
-            <DecrementButton button-text="-" @click="decrement" type="button" />
+            <DecrementButton
+              button-text="-"
+              @click="decrement"
+              type="button"
+              :disabled="!props.formEnabled"
+            />
             <span id="ticketAmount">{{ ticketAmount }}</span>
-            <IncrementButton button-text="+" @click="increment" type="button" />
+            <IncrementButton
+              button-text="+"
+              @click="increment"
+              type="button"
+              :disabled="!props.formEnabled"
+            />
           </div>
         </div>
       </div>
@@ -92,6 +109,7 @@ const resetForm = () => {
             name="email"
             placeholder="Enter your email address"
             required
+            :disabled="!props.formEnabled"
           />
         </label>
       </div>
@@ -103,18 +121,30 @@ const resetForm = () => {
             type="tel"
             name="phone"
             placeholder="Enter your phone number (optional)"
+            :disabled="!props.formEnabled"
           />
         </label>
       </div>
       <div class="form-container">
         <label class="terms-container">
-          <input v-model="termsChecked" type="checkbox" name="terms" required />
+          <input
+            v-model="termsChecked"
+            type="checkbox"
+            name="terms"
+            required
+            :disabled="!props.formEnabled"
+          />
           <span>I agree to the terms and conditions</span>
         </label>
       </div>
       <div class="form-container">
-        <TheButton type="submit" class="proceed-btn" buttonText="Proceed" :disabled="isProceedDisabled" />
-        <TheButton type="button" class="cancel-btn" buttonText="Cancel" @click="resetForm"/>
+        <TheButton
+          type="submit"
+          class="proceed-btn"
+          buttonText="Proceed"
+          :disabled="isProceedDisabled"
+        />
+        <TheButton type="button" class="cancel-btn" buttonText="Cancel" @click="resetForm" />
       </div>
     </form>
   </section>

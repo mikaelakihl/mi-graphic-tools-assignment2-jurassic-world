@@ -1,12 +1,29 @@
 <script setup lang="ts">
-import BookingCard from '@/components/molecules/BookingCard.vue';
-import OrderForm from '@/components/molecules/OrderForm.vue';
+import { ref } from 'vue'
+import BookingCard from '@/components/molecules/BookingCard.vue'
+import OrderForm from '@/components/molecules/OrderForm.vue'
+
+const ticketAmount = ref(0)
+const formEnabled = ref(false)
+
+const enableForm = () => {
+  ticketAmount.value++ // Add 1 ticket when enabling
+  formEnabled.value = true
+}
+
+const updateTicketAmount = (amount: number) => {
+  ticketAmount.value = amount
+}
 </script>
 
 <template>
   <div class="ticket">
-    <BookingCard />
-    <OrderForm />
+    <BookingCard @enable-form="enableForm" />
+    <OrderForm
+      :ticketAmount="ticketAmount"
+      :formEnabled="formEnabled"
+      @update-ticket-amount="updateTicketAmount"
+    />
   </div>
 </template>
 

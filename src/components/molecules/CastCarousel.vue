@@ -55,7 +55,7 @@ const actors = [
     url: "https://www.imdb.com/name/nm4534098/?ref_=tt_cst_i_6"
   },
   {
-    image: "assets/actors/ed-skrein.jpg",
+    image: "assets/actors/profile.png",
     name: "See more from",
     character: "cast & crew",
     url: "https://www.imdb.com/title/tt31036941/"

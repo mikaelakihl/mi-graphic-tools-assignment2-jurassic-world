@@ -18,7 +18,7 @@
 <style lang="scss" scoped>
 .wrapper {
   width: 100%;
-  min-height: 50px;
+  min-height: rem(50);
   background-color: $lightgreen;
 }
 
@@ -40,7 +40,7 @@
   p {
     color: $white;
     font-family: $secondary-font;
-    font-size: 6px;
+    font-size: rem(6);
   }
 }
 
@@ -49,8 +49,8 @@
 }
 
 img {
-  max-width: 20px;
-  max-height: 20px;
+  max-width: rem(20);
+  max-height: rem(20);
 }
 
 @media (min-width: 600px) {
@@ -59,15 +59,15 @@ img {
   }
 
   img {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: rem(30);
+    max-height: rem(30);
   }
 }
 
 @media (min-width: 1024px) {
   img {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: rem(40);
+    max-height: rem(40);
   }
 }
 </style>

@@ -8,3 +8,53 @@ body {
 .header-wrapper {
   background-color: $black;
 }
+
+// INPUTS
+
+input:not([type="checkbox"]) { // All inputs but checkboxes
+  background-color: $white;
+  color: $black;
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 50px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: $white;
+  color: $black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  
+}
+
+input[type="checkbox"]:checked::after {
+  content: "\2716"; // Svart X-symbol
+  font-size: 30px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+}
+
+input:disabled {
+  background-color: $lightgrey;
+  color: $black;
+}

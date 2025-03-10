@@ -24,18 +24,21 @@ import TheButton from '@/components/atoms/TheButton.vue';
 <style lang="scss" scoped>
 .home {
   background-color: black;
-  height: 86.7vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  // text-align: center;
 
   .image-container {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
-  
   h2 {
     text-align: center;
-    margin-top: 2rem;
+    margin: 0;
+    margin-top: 1.5rem;
+    // @include h1; Not yet implemented
     color: $lightyellow;
   }
 
@@ -43,8 +46,8 @@ import TheButton from '@/components/atoms/TheButton.vue';
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.5rem;
-    gap: 2rem;
+    margin-top: 3.5rem;
+    gap: 3rem;
 
     .homepage-buttons {
       width: 8.25rem;
@@ -54,25 +57,60 @@ import TheButton from '@/components/atoms/TheButton.vue';
   }
   
   .quote-container {
-    width: 85%;
-    margin: auto;
-    margin-top: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
     color: rgba(255, 255, 255, 0.35);;
     font-size: 20px;
     font-style: italic;
+    // @include h3; not yet implemented 
       
     .quote-giver {
-      margin: 1rem;
-      position: relative;
-      left: 16.5rem;
+      text-align: right;
     }
 
     .quote-p {
-      margin: 0;
+      width: 80%;
+      margin: auto;
     }
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .home {
+
+    .image-container {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      img {
+        width: 70%;
+        height: auto;
+      }
+    }
+
+    h2 {
+      margin-top: -110px;
+    }
+
+    .button-container {
+      margin-top: 1rem;
+      gap: 6rem;
+      .homepage-buttons {
+      }
+    }
+    
+    .quote-container {
+        
+      .quote-giver {
+        margin-right: 7rem;
+      }
+
+      .quote-p {
+        width: 60%;
+      }
+    }
+  }
+}
+
 </style>

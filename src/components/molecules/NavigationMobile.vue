@@ -86,15 +86,16 @@ function toggleHamburgerMenu() {
   position: relative;
   background-color: $black;
   width: 100%;
+  height: 10vh;
 }
 
 .hamburger-container {
   position: relative;
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: left;
+  margin-left: 1rem;
 }
 
 .hamburger {
@@ -119,7 +120,7 @@ function toggleHamburgerMenu() {
 .hamburger.active {
   position: relative;
   // right: 1.25rem;
-  left: 20rem;
+  left: 16rem;
 }
 
 .hamburger.active .hamburger-line:nth-child(1) {

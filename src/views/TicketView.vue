@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import TheButton from '@/components/atoms/TheButton.vue';
 import BookingCard from '@/components/molecules/BookingCard.vue';
 import OrderForm from '@/components/molecules/OrderForm.vue';
 </script>
@@ -7,9 +6,7 @@ import OrderForm from '@/components/molecules/OrderForm.vue';
 <template>
   <div class="ticket">
     <BookingCard />
-    <h1>This is the Tickets page</h1>
     <OrderForm />
-    <TheButton button-text="Buy now"/> <!-- Placeholder example on how to use "TheButton" -->
   </div>
 </template>
 

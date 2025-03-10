@@ -39,7 +39,7 @@
 
   p {
     color: $white;
-    font-family: $secondary-font;
+    @include h2;
     font-size: 6px;
   }
 }

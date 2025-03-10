@@ -10,9 +10,9 @@ button {
   padding: 0.5rem;
   border: 0;
   border-radius: 8px;
-  font-size: 20px;
-  font-weight: 400;
   box-shadow: 0px 4px 4px 0px #00000040;
+  @include h2;
+
 
   &:active {
     background-color: $lightyellow;

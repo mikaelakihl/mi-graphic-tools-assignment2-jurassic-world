@@ -68,6 +68,18 @@ generateDates()
       margin-top: 2rem;
     }
   }
+
+  .bookingDate{
+    @include h2;
+  }
+
+  .bookingTime{
+    @include quote;
+  }
+
+  .bookingLocation{
+    @include h3;
+  }
 }
 
 @media (min-width: 1440px) {

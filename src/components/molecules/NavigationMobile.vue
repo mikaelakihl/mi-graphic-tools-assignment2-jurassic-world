@@ -55,7 +55,7 @@ function toggleHamburgerMenu() {
 
 .menu-open-wrapper.active {
   display: block;
-  z-index: 1;
+  z-index: 998;
 }
 
 .menu-open-heading {
@@ -106,7 +106,7 @@ function toggleHamburgerMenu() {
   margin: 0.5rem 0 0 0.5rem;
   background: transparent;
   border: 0;
-  z-index: 2;
+  z-index: 999;
 }
 
 .hamburger-line {

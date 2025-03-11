@@ -24,6 +24,7 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
 </template>
 
 <style lang="scss" scoped>
+
 .home {
   background-color: black;
   height: 84.1vh;

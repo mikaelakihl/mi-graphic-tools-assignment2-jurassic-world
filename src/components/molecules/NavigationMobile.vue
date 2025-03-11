@@ -1,8 +1,12 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { computed, ref } from 'vue';
+import { RouterLink, RouterView, useRoute } from 'vue-router';
 
-const isActive = ref(false)
+const isActive = ref(false);
+const route = useRoute();
+const ShouldShowSvg = computed(()=> {
+  return route.path!== '/';
+});
 
 function toggleHamburgerMenu() {
   isActive.value = !isActive.value
@@ -29,6 +33,14 @@ function toggleHamburgerMenu() {
         <div class="router-link-wrapper">
           <RouterLink class="router-link" to="/about">About</RouterLink>
         </div>
+        <div class="router-link-wrapper router-link-wrapper-icon">
+          <img
+            v-if="ShouldShowSvg"
+            class="router-link router-link-icon"
+            src="/assets/svg/JurassicWorld.svg"
+            height="115px"
+          />
+        </div>
         <div class="router-link-wrapper">
           <RouterLink class="router-link" to="/tickets">Tickets</RouterLink>
         </div>
@@ -37,11 +49,25 @@ function toggleHamburgerMenu() {
         </div>
       </nav>
     </div>
+
   </div>
+  <div class="router-link-icon-mobile-wrapper">
+      <img
+          v-if="ShouldShowSvg"
+          class="router-link router-link-icon router-link-icon-mobile"
+          src="/assets/svg/JurassicWorld.svg"
+          height="115px"
+          />
+    </div>
   <RouterView />
 </template>
 
 <style lang="scss" scoped>
+
+.menu-container {
+  position: relative;
+  width: 80%;
+}
 .menu-open-wrapper {
   background-color: $black;
   width: 80%;
@@ -65,7 +91,6 @@ function toggleHamburgerMenu() {
 }
 
 .nav-links {
-  display: flex;
   flex-direction: column;
   padding-bottom: 0.625rem;
 }
@@ -75,15 +100,19 @@ function toggleHamburgerMenu() {
   height: 3.75rem;
   display: flex;
   align-items: center;
-}
 
-.router-link {
-  text-decoration: none;
-  padding-left: 1rem;
-  @include h4;
-  color: $white;
-}
+  .router-link {
+    text-decoration: none;
+    margin-left: 1rem;
+    @include h4;
+    color: $white;
 
+    &:hover{
+      border-bottom: 1px solid $white;
+
+
+    }
+  }
 .menu-container {
   position: relative;
   background-color: $black;
@@ -93,6 +122,7 @@ function toggleHamburgerMenu() {
 
 .hamburger-container {
   position: relative;
+
   height: 100%;
   display: flex;
   align-items: center;
@@ -109,15 +139,13 @@ function toggleHamburgerMenu() {
   z-index: 999;
 }
 
-.hamburger-line {
-  display: block;
-  width: 2.3125rem;
-  height: 0.125rem;
-  background-color: $white;
-  border-radius: 0.375rem;
-  margin-bottom: 0.625rem;
-  transition: all 0.3s ease-in-out;
+.router-link-wrapper-icon {
+  display: none;
 }
+.router-link-icon-mobile-wrapper{
+  display: flex;
+  justify-content: right;
+  height: 100px;
 
 .hamburger.active {
   position: relative;
@@ -125,20 +153,66 @@ function toggleHamburgerMenu() {
   left: 19rem;
 }
 
-.hamburger.active .hamburger-line:nth-child(1) {
-  transform: rotate(45deg);
-  position: absolute;
-  height: 0.25rem;
+  .router-link-icon-mobile{
+    height: 80px;
+  }
+
 }
 
-.hamburger.active .hamburger-line:nth-child(2) {
-  opacity: 0;
-}
+// ------------Tablet/desktop navigation-----------
 
-.hamburger.active .hamburger-line:nth-child(3) {
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 1.25rem;
-  height: 0.25rem;
+@media (min-width: 800px) {
+  .menu-open-wrapper {
+    display: block;
+    height: 120px;
+    width: 100%;
+  }
+  .menu-open-heading {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .router-link-wrapper {
+    border-bottom: none;
+    justify-content: center;
+    height: auto;
+
+    .router-link{
+      margin-left: 0;
+    }
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-direction: row;
+    align-items: center;
+    height: 120px;
+
+    .router-link-wrapper:nth-child(4) {
+      grid-column: 4;
+    }
+  }
+
+  .router-link-wrapper-icon {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    .router-link {
+      padding-left: 0;
+    }
+
+    .router-link-icon {
+      max-width: 100%;
+      &:hover{
+        border-bottom: none;
+      }
+    }
+  }
 }
 </style>

@@ -13,7 +13,6 @@ button {
   box-shadow: 0px 4px 4px 0px #00000040;
   @include h2;
 
-
   &:active {
     background-color: $lightyellow;
   }

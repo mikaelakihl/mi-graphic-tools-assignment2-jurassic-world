@@ -1,63 +1,114 @@
 <script lang="ts" setup>
+
 const actors = [
   {
-    image: "./assets/actors/scarlet-johansson.jpg",
     name: "Scarlett Johansson",
     character: "Zora Bennett",
+    img: {
+        src: 'public/actors/scarlet-johansson.jpg',
+        width: 120,
+        height: 120,
+        alt: 'Scarlett Johansson, actress in Jurassic World Rebirth'
+      },
     url: "https://www.imdb.com/name/nm0424060/"
   },
   {
-    image: "./assets/actors/jonathan-bailey.jpg",
     name: "Jonathan Bailey",
     character: "Dr. Henry Loomis",
+    img: {
+        src: 'public/actors/jonathan-bailey.jpg',
+        width: 120,
+        height: 120,
+        alt: 'Jonathan Bailey, actor in Jurassic World Rebirth'
+      },
     url: "https://www.imdb.com/name/nm0047332/?ref_=tt_cst_t_2"
   },
   {
-    image: "./assets/actors/rupert-friend.jpg",
     name: "Rupert Friend",
     character: "Martin Krebs",
+    img: {
+        src: 'public/actors/rupert-friend.jpg',
+        width: 120,
+        height: 120,
+        alt: 'Rupert Friend, actor in Jurassic World Rebirth'
+      },
     url: "https://www.imdb.com/name/nm1670029/?ref_=tt_cst_t_3"
   },
   {
-    image: "./assets/actors/mahershala-ali.jpg",
     name: "Mahershala Ali",
     character: "Duncan Kincaid",
+    img: {
+        src: 'public/actors/mahershala-ali.jpg',
+        width: 120,
+        height: 120,
+        alt: 'Mahershala Ali, actor in Jurassic World Rebirth'
+      },
     url: "https://www.imdb.com/name/nm0991810/?ref_=tt_cst_t_5"
   },
   {
-    image: "./assets/actors/manuel-garcia-rulfo.jpg",
     name: "Manuel Garcia-Rulfo",
     character: "Reuben Delgado",
+    img: {
+        src: 'public/actors/manuel-garcia-rulfo.jpg',
+        width: 120,
+        height: 120,
+        alt: 'Manuel Garcia-Rulfo, actor in Jurassic World Rebirth'
+      },
     url: "https://www.imdb.com/name/nm2636310/?ref_=tt_cst_t_4"
   },
   {
-    image: "./assets/actors/audrina-miranda.jpg",
     name: "Audrina Miranda",
     character: "Isabella Delgado",
+    img: {
+        src: 'public/actors/audrina-miranda.jpg',
+        width: 120,
+        height: 120,
+        alt: 'Audrina Miranda, actress in Jurassic World Rebirth'
+      },
     url: "https://www.imdb.com/name/nm12778418/?ref_=tt_cst_t_11"
   },
   {
-    image: "./assets/actors/bechir-sylvain.jpg",
     name: "Bechir Sylvain",
     character: "LeClerc",
+    img: {
+        src: 'public/actors/bechir-sylvain.jpg',
+        width: 120,
+        height: 120,
+        alt: 'Bechir Sylvain, actor in Jurassic World Rebirth'
+      },
     url: "https://www.imdb.com/name/nm2718355/?ref_=tt_cst_t_10"
   },
   {
-    image: 'assets/actors/luna-blaise.jpg',
     name: 'Luna Blaise',
     character: 'Delgado',
+    img: {
+        src: 'public/actors/luna-blaise.jpg',
+        width: 120,
+        height: 120,
+        alt: 'Luna Blaise, actress in Jurassic World Rebirth'
+      },
     url: 'https://www.imdb.com/name/nm2399046/?ref_=tt_cst_t_7',
   },
   {
-    image: "./assets/actors/ed-skrein.jpg",
     name: "Ed Skrein",
     character: "(To Be Announced)",
+    img: {
+        src: 'public/actors/ed-skrein.jpg',
+        width: 120,
+        height: 120,
+        alt: 'Ed Skrein, actor in Jurassic World Rebirth'
+      },
     url: "https://www.imdb.com/name/nm4534098/?ref_=tt_cst_i_6"
   },
   {
-    image: "assets/actors/profile.png",
     name: "See more from",
     character: "cast & crew",
+    img: {
+        src: 'public/actors/profile.png',
+        width: 120,
+        height: 120,
+        alt: 'profile icon'
+      },
     url: "https://www.imdb.com/title/tt31036941/"
   }
 ];
@@ -66,7 +117,7 @@ const actors = [
 <template>
   <div class="card-container">
     <a :href="card.url" target="_blank" class="card" v-for="(card, index) in actors" :key="index">
-      <img class="cast-image" :src="card.image" :alt="card.name" />
+      <img class="cast-image" :src="card.img.src" :alt="card.img.alt" loading="lazy" width="120px" height="120px" />
       <div class="actor-info">
         <p class="actor-name">{{ card.name }}</p>
         <p class="character-name">{{ card.character }}</p>
@@ -90,7 +141,7 @@ h2 {
     gap: 20px;
     max-width: 100vw;
     overflow-x: auto;
-    padding: rem(30);
+    padding: rem(40);
 
     .card {
       max-width: 144px;
@@ -131,8 +182,6 @@ h2 {
   .cast-image {
     border-radius: 50%;
     object-fit: cover;
-    width: 120px;
-    height: 120px;
   }
 
   /* Media query för tablet-läge */

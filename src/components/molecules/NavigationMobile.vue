@@ -16,7 +16,7 @@ function toggleHamburgerMenu() {
 <template>
   <div class="menu-container">
     <div class="hamburger-container">
-      <button :class="['hamburger', { active: isActive }]" @click="toggleHamburgerMenu">
+      <button :class="['hamburger', { active: isActive }]" @click="toggleHamburgerMenu" aria-label="Navigation menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>

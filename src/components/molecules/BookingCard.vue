@@ -4,12 +4,12 @@ import { ref, defineEmits } from 'vue'
 
 const emit = defineEmits(['enable-form']);
 
-interface Day {
+interface IDay {
   date: string
   display: string
 }
 
-const days = ref<Day[]>([])
+const days = ref<IDay[]>([])
 
 const generateDates = (): void => {
   const today = new Date()
@@ -80,7 +80,7 @@ generateDates()
 
   .bookingLocation {
     @include h3;
-    font-size: 16px;
+    font-size: rem(16);
     color: $grey;
   }
 }

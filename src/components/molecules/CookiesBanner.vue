@@ -31,7 +31,7 @@ const hideCookies = () => {
   justify-content: space-evenly;
   align-items: center;
   gap: 0.5rem;
-  font-size: 20px;
+  font-size: rem(20);
   transition:
     transform 0.5s ease,
     visibility 0.5s ease;

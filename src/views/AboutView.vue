@@ -41,23 +41,42 @@
   .about {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
     img {
       object-fit: cover;
-      max-width: 85vw;
+      max-width: 100vw;
+      padding: rem(30);
     }
 
-    h1 {
-      @include h2;
-      color: $yellow;
+    article {
+      padding: rem(30);
+      padding-left: 0;
+      header {
+        @include h2;
+        color: $yellow;
+        font-size: rem(16);
+      }
     }
+  }
+  p {
+    @include h2;
+    font-size: rem(15);
+    color: $yellow;
+    max-width: 40ch;
+  }
+  
+  @media (min-width: 700px) and (max-width: 1240px) {
     p {
-      @include h2;
-      font-size: rem(15);
-      color: $yellow;
-      max-width: 40ch;
+      font-size: rem(24);
+    }
+  }
+
+  @media (min-width: 1240px) {
+    .about {
+      flex-direction: row-reverse;
+      img {
+        max-width: 50vw;
+      }
     }
   }
 </style>

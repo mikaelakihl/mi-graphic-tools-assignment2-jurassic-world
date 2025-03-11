@@ -60,9 +60,9 @@ generateDates()
     justify-content: center;
     text-align: center;
     position: relative;
-    width: 180px;
-    height: 300px;
-    border-radius: 8px;
+    width: rem(180);
+    height: rem(300);
+    border-radius: rem(8);
     color: $white;
 
     button {
@@ -87,16 +87,17 @@ generateDates()
 
 @media (min-width: 1440px) {
   .bookingCard-wrapper {
+    margin-top: 0.5rem;
     flex-direction: column;
     overflow-y: auto;
-    max-height: 40vh;
+    max-height: 38vh;
 
     .bookingCard {
       width: 86.25rem;
       height: 7.5rem;
       justify-content: space-around;
       flex-direction: row;
-      margin: 0.5625rem auto;
+      margin: 0.5rem auto;
 
       button {
         margin-top: 0;

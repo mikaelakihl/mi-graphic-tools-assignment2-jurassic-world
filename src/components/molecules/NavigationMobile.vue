@@ -28,10 +28,10 @@ function toggleHamburgerMenu() {
 
       <nav class="nav-links">
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/">Home</RouterLink>
+          <RouterLink class="router-link" to="/" @click="toggleHamburgerMenu">Home</RouterLink>
         </div>
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/about">About</RouterLink>
+          <RouterLink class="router-link" to="/about" @click="toggleHamburgerMenu">About</RouterLink>
         </div>
         <div class="router-link-wrapper router-link-wrapper-icon">
           <img
@@ -42,10 +42,10 @@ function toggleHamburgerMenu() {
           />
         </div>
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/tickets">Tickets</RouterLink>
+          <RouterLink class="router-link" to="/cast" @click="toggleHamburgerMenu">Cast/Crew</RouterLink>
         </div>
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/cast">Cast</RouterLink>
+          <RouterLink class="router-link" to="/tickets" @click="toggleHamburgerMenu">Tickets</RouterLink>
         </div>
       </nav>
     </div>
@@ -207,6 +207,11 @@ function toggleHamburgerMenu() {
 
     .router-link{
       margin-left: 0;
+    }
+    
+
+    .router-link-active {
+      border-bottom: 2px solid $white;
     }
   }
 

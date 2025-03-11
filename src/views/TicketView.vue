@@ -33,6 +33,6 @@ h1 {
 }
 .ticket {
   background-color: black;
-  height: 98vh;
+  height: 84.1vh;
 }
 </style>

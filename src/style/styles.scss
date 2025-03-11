@@ -1,7 +1,7 @@
 @use 'index' as *; // Import all the functions from the index file
 
 body {
-  background-color: $grey;
+  background-color: $black;
   @include h4;
 }
 

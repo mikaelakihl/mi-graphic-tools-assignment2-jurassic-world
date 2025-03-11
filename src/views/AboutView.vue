@@ -72,7 +72,6 @@
 
   @media (min-width: 1240px) {
     .about {
-      background-color: rgb(67, 14, 14);
       flex-direction: row-reverse;
       justify-content: center;
       img {

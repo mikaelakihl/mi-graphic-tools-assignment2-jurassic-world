@@ -70,8 +70,6 @@ img {
     display: flex;
     justify-content: space-between;
 }
-  .icon-wrapper {
-}
 
 .p-wrapper {
   align-items: end;

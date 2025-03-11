@@ -8,7 +8,7 @@ import audrinaImage from '/assets/actors/audrina-miranda.jpg';
 import bechirImage from '/assets/actors/bechir-sylvain.jpg';  
 import lunaImage from '/assets/actors/luna-blaise.jpg';  
 import edImage from '/assets/actors/ed-skrein.jpg';  
-import profileImage from '/assets/actors/profile.jpg';  
+import profileImage from '/assets/actors/profile.png';  
   
   
 const actors = [

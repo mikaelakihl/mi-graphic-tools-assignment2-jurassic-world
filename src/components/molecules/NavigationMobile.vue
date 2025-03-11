@@ -78,12 +78,12 @@ function toggleHamburgerMenu() {
   display: none;
   position: fixed;
   top: 0;
-  border-right: solid 0.0625rem $white;
 }
 
 .menu-open-wrapper.active {
   display: block;
   z-index: 998;
+  border-right: solid 0.0625rem $white;
 }
 
 .menu-open-heading {
@@ -105,12 +105,13 @@ function toggleHamburgerMenu() {
 
   .router-link {
     text-decoration: none;
+    border-bottom: 2px solid $black;
     margin-left: 1rem;
     @include h4;
     color: $white;
 
     &:hover{
-      border-bottom: 1px solid $white;
+      border-bottom: 2px solid $white;
     }
   }
 }
@@ -190,6 +191,11 @@ function toggleHamburgerMenu() {
     height: 120px;
     width: 100%;
   }
+
+  .menu-open-wrapper.active {
+  border-right: none;
+  }
+
   .menu-open-heading {
     display: none;
   }
@@ -240,7 +246,7 @@ function toggleHamburgerMenu() {
     .router-link-icon {
       max-width: 100%;
       &:hover{
-        border-bottom: none;
+        border-bottom: 2px solid $black;
       }
     }
   }

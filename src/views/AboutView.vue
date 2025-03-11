@@ -3,7 +3,7 @@
 <template>
   <div class="about">
 
-    <img src="/assets/imgs/jurassic-world-rebirth-zora-loomis.jpg" alt="two people who are looking att a dinosaure egg in a nest"/>
+    <img src="/assets/imgs/jurassic-world-rebirth-zora-loomis.jpg" alt="Two people who are looking at a dinosaure egg in a nest" loading="lazy"/>
   
     <article>
       <header>
@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 84.1vh;
     img {
       object-fit: cover;
       max-width: 100vw;
@@ -50,7 +51,6 @@
 
     article {
       padding: rem(30);
-      padding-left: 0;
       header {
         @include h2;
         color: $yellow;
@@ -58,24 +58,27 @@
       }
     }
   }
+  
   p {
-    @include h2;
-    font-size: rem(15);
-    color: $yellow;
-    max-width: 40ch;
+    @include h4;
+    color: $lightyellow;
   }
   
   @media (min-width: 700px) and (max-width: 1240px) {
     p {
-      font-size: rem(24);
+      font-size: rem(20);
     }
   }
 
   @media (min-width: 1240px) {
     .about {
       flex-direction: row-reverse;
+      justify-content: center;
       img {
         max-width: 50vw;
+      }
+      p {
+        font-size: rem(22);
       }
     }
   }

@@ -20,6 +20,7 @@ const hideCookies = () => {
 
 <style lang="scss" scoped>
 .cookies {
+  z-index: 99;
   background-color: $black;
   color: $lightgrey;
   position: fixed;

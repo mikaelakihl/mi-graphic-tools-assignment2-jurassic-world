@@ -39,7 +39,7 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
   h2 {
     text-align: center;
     margin: 0;
-    margin-top: 1rem;
+    margin-top: -0.5rem;
     @include h1;
     color: $lightyellow;
   }

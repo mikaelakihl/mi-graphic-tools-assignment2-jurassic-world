@@ -55,7 +55,7 @@ function toggleHamburgerMenu() {
 
 .menu-open-wrapper.active {
   display: block;
-  z-index: 1;
+  z-index: 998;
 }
 
 .menu-open-heading {
@@ -86,22 +86,27 @@ function toggleHamburgerMenu() {
 
 .menu-container {
   position: relative;
-  width: 80%;
+  background-color: $black;
+  width: 100%;
+  height: 10vh;
 }
 
 .hamburger-container {
   position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 1rem;
 }
 
 .hamburger {
   width: 3.125rem;
   height: 3.125rem;
+  margin: 0.5rem 0 0 0.5rem;
   background: transparent;
   border: 0;
-  left: 2.25rem;
-  top: 1.125rem;
-  z-index: 2;
-  position: absolute;
+  z-index: 999;
 }
 
 .hamburger-line {
@@ -115,8 +120,9 @@ function toggleHamburgerMenu() {
 }
 
 .hamburger.active {
-  right: 1.25rem;
-  left: unset;
+  position: relative;
+  // right: 1.25rem;
+  left: 19rem;
 }
 
 .hamburger.active .hamburger-line:nth-child(1) {

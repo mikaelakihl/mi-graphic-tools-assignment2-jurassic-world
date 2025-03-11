@@ -18,13 +18,14 @@
 <style lang="scss" scoped>
 .wrapper {
   width: 100%;
-  min-height: rem(50);
+  min-height: rem(40);
   background-color: $lightgreen;
 }
 
 .icon-wrapper {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   padding-top: 0.5rem;
   padding-left: 1rem;
   padding-bottom: 0.5rem;
@@ -65,9 +66,15 @@ img {
 }
 
 @media (min-width: 1024px) {
-  img {
-    max-width: rem(40);
-    max-height: rem(40);
-  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+  .icon-wrapper {
+}
+
+.p-wrapper {
+  align-items: end;
+}
 }
 </style>

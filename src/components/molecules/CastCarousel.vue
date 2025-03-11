@@ -55,12 +55,13 @@ const actors = [
     url: 'https://www.imdb.com/name/nm4534098/?ref_=tt_cst_i_6',
   },
   {
-    image: 'assets/actors/ed-skrein.jpg',
-    name: 'See more from',
-    character: 'cast & crew',
-    url: 'https://www.imdb.com/title/tt31036941/',
-  },
-]
+
+    image: "assets/actors/profile.png",
+    name: "See more from",
+    character: "cast & crew",
+    url: "https://www.imdb.com/title/tt31036941/"
+  }
+];
 
 const openActorPage = (url: string) => {
   if (url) {
@@ -80,47 +81,78 @@ const openActorPage = (url: string) => {
     </div>
   </div>
 </template>
-
 <style lang="scss" scoped>
-.card-container {
-  display: flex;
+
+h2 {
+  @include h2;
   background-color: $black;
-  padding-bottom: 10px;
-  gap: 10px;
-  max-width: 100vw;
-  overflow-x: auto;
-  // scroll-behavior: smooth;
-
-  .card {
-    min-width: 124px;
-    min-height: 172px;
+  color: $white;
+  text-decoration: underline;
+}
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
     background-color: $black;
-    cursor: pointer;
-  }
-  .card:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
+    padding-bottom: 10px;
+    gap: 20px;
+    max-width: 100vw;
+    overflow-x: auto;
+    padding: rem(30);
+
+    .card {
+      max-width: 144px;
+      max-height: 192px;
+      background-color: $black;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    p {
+      color: $white;
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .actor-name {
+      font-weight: 700;
+    }
   }
 
-  p {
-    color: $white;
-    font-size: 12px;
-    margin: 0;
+  .actor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
   }
-  .actor-name {
-    font-weight: 700;
-  }
-}
 
-.actor-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.cast-image {
-  border-radius: 50%;
-  object-fit: cover;
-  width: 120px;
-  height: 120px;
-}
+  .cast-image {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Media query för tablet-läge */
+  @media (min-width: 720px) and (max-width: 1240px) {
+    .card-container {
+      overflow-x: unset;
+      grid-template-columns: repeat(5, 1fr); /* 5 kort per rad */
+      grid-template-rows: repeat(2, auto); /* 2 rader */
+    }
+
+    .card {
+      max-width: 100%;
+      max-height: auto;
+    }
+  }
 </style>

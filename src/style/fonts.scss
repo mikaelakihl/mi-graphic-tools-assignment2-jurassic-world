@@ -30,8 +30,15 @@
   font-weight: 300;
 }
 
-@mixin paragraph {
-  font-family: 'Josefin Slab', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+
+@mixin paragraph{
+    font-family: 'Josefin Slab', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@mixin link{
+    font-family: 'Noto Serif', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
 }

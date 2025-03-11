@@ -81,7 +81,7 @@ function toggleHamburgerMenu() {
 
 .menu-open-wrapper.active {
   display: block;
-  z-index: 1;
+  z-index: 998;
 }
 
 .menu-open-heading {
@@ -113,63 +113,45 @@ function toggleHamburgerMenu() {
 
     }
   }
+.menu-container {
+  position: relative;
+  background-color: $black;
+  width: 100%;
+  height: 10vh;
 }
 
 .hamburger-container {
   position: relative;
 
-  .hamburger {
-    width: 3.125rem;
-    height: 3.125rem;
-    background: transparent;
-    border: 0;
-    left: 2.25rem;
-    top: 1.125rem;
-    z-index: 2;
-    position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 1rem;
+}
 
-    .hamburger-line {
-      display: block;
-      width: 2.3125rem;
-      height: 0.125rem;
-      background-color: $white;
-      border-radius: 0.375rem;
-      margin-bottom: 0.625rem;
-      transition: all 0.3s ease-in-out;
-    }
-  }
-
-  .hamburger.active {
-    right: 1.25rem;
-    left: unset;
-  }
-
-  .hamburger.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg);
-    position: absolute;
-    height: 0.25rem;
-  }
-
-  .hamburger.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 1.25rem;
-    height: 0.25rem;
-  }
+.hamburger {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin: 0.5rem 0 0 0.5rem;
+  background: transparent;
+  border: 0;
+  z-index: 999;
 }
 
 .router-link-wrapper-icon {
   display: none;
 }
-
 .router-link-icon-mobile-wrapper{
   display: flex;
   justify-content: right;
   height: 100px;
+
+.hamburger.active {
+  position: relative;
+  // right: 1.25rem;
+  left: 19rem;
+}
 
   .router-link-icon-mobile{
     height: 80px;

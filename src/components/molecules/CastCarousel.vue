@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-
+import scarlettImage from '@/assets/actors/scarlet-johansson.jpg';
 const actors = [
   {
     name: "Scarlett Johansson",
     character: "Zora Bennett",
     img: {
-        src: 'public/actors/scarlet-johansson.jpg',
+        src: scarlettImage,
         width: 120,
         height: 120,
         alt: 'Scarlett Johansson, actress in Jurassic World Rebirth'

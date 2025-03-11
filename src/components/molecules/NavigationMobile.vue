@@ -113,6 +113,7 @@ function toggleHamburgerMenu() {
 
     }
   }
+}
 .menu-container {
   position: relative;
   background-color: $black;

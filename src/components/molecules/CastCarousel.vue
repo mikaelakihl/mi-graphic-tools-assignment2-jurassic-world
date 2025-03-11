@@ -1,5 +1,16 @@
 <script lang="ts" setup>
 import scarlettImage from '/assets/actors/scarlet-johansson.jpg';
+import jonathanImage from '/assets/actors/jonathan-bailey.jpg';
+import rupertImage from '/assets/actors/rupert-friend.jpg';
+import mahershalaImage from '/assets/actors/mahershala-ali.jpg';
+import manuelImage from '/assets/actors/manuel-garcia-rulfo.jpg';  
+import audrinaImage from '/assets/actors/audrina-miranda.jpg';  
+import bechirImage from '/assets/actors/bechir-sylvain.jpg';  
+import lunaImage from '/assets/actors/luna-blaise.jpg';  
+import edImage from '/assets/actors/ed-skrein.jpg';  
+import profileImage from '/assets/actors/profile.jpg';  
+  
+  
 const actors = [
   {
     name: "Scarlett Johansson",
@@ -16,7 +27,7 @@ const actors = [
     name: "Jonathan Bailey",
     character: "Dr. Henry Loomis",
     img: {
-        src: 'public/actors/jonathan-bailey.jpg',
+        src: jonathanImage,
         width: 120,
         height: 120,
         alt: 'Jonathan Bailey, actor in Jurassic World Rebirth'
@@ -27,7 +38,7 @@ const actors = [
     name: "Rupert Friend",
     character: "Martin Krebs",
     img: {
-        src: 'public/actors/rupert-friend.jpg',
+        src: rupertImage,
         width: 120,
         height: 120,
         alt: 'Rupert Friend, actor in Jurassic World Rebirth'
@@ -38,7 +49,7 @@ const actors = [
     name: "Mahershala Ali",
     character: "Duncan Kincaid",
     img: {
-        src: 'public/actors/mahershala-ali.jpg',
+        src: mahershalaImage,
         width: 120,
         height: 120,
         alt: 'Mahershala Ali, actor in Jurassic World Rebirth'
@@ -49,7 +60,7 @@ const actors = [
     name: "Manuel Garcia-Rulfo",
     character: "Reuben Delgado",
     img: {
-        src: 'public/actors/manuel-garcia-rulfo.jpg',
+        src: manuelImage,
         width: 120,
         height: 120,
         alt: 'Manuel Garcia-Rulfo, actor in Jurassic World Rebirth'
@@ -60,7 +71,7 @@ const actors = [
     name: "Audrina Miranda",
     character: "Isabella Delgado",
     img: {
-        src: 'public/actors/audrina-miranda.jpg',
+        src: audrinaImage,
         width: 120,
         height: 120,
         alt: 'Audrina Miranda, actress in Jurassic World Rebirth'
@@ -71,7 +82,7 @@ const actors = [
     name: "Bechir Sylvain",
     character: "LeClerc",
     img: {
-        src: 'public/actors/bechir-sylvain.jpg',
+        src: bechirImage,
         width: 120,
         height: 120,
         alt: 'Bechir Sylvain, actor in Jurassic World Rebirth'
@@ -82,7 +93,7 @@ const actors = [
     name: 'Luna Blaise',
     character: 'Delgado',
     img: {
-        src: 'public/actors/luna-blaise.jpg',
+        src: lunaImage,
         width: 120,
         height: 120,
         alt: 'Luna Blaise, actress in Jurassic World Rebirth'
@@ -93,7 +104,7 @@ const actors = [
     name: "Ed Skrein",
     character: "(To Be Announced)",
     img: {
-        src: 'public/actors/ed-skrein.jpg',
+        src: edImage,
         width: 120,
         height: 120,
         alt: 'Ed Skrein, actor in Jurassic World Rebirth'
@@ -104,7 +115,7 @@ const actors = [
     name: "See more from",
     character: "cast & crew",
     img: {
-        src: 'public/actors/profile.png',
+        src: profileImage,
         width: 120,
         height: 120,
         alt: 'profile icon'

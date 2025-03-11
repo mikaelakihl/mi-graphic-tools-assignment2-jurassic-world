@@ -122,7 +122,7 @@ function toggleHamburgerMenu() {
 .hamburger.active {
   position: relative;
   // right: 1.25rem;
-  left: 20rem;
+  left: 19rem;
 }
 
 .hamburger.active .hamburger-line:nth-child(1) {

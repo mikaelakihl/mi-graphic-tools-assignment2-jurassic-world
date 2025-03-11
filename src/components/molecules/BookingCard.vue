@@ -70,15 +70,15 @@ generateDates()
     }
   }
 
-  .bookingDate{
+  .bookingDate {
     @include h2;
   }
 
-  .bookingTime{
+  .bookingTime {
     @include quote;
   }
 
-  .bookingLocation{
+  .bookingLocation {
     @include h3;
     font-size: 16px;
     color: $grey;

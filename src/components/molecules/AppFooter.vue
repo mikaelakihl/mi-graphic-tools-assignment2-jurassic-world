@@ -1,30 +1,31 @@
 <script lang="ts" setup></script>
 
 <template>
-    <div class="wrapper">
-      <div class="icon-wrapper">
-          <img src="/assets/icons/facebook-icon.jpg" />
-          <img src="/assets/icons/InstagramIcon.jpg" />
-          <img src="/assets/icons/youtube-icon.jpg" />
-      </div>
-      <div class="p-wrapper">
-          <p class="upper">Movie platform © 2025 Powster </p>
-          <p>© 2025 Universal Pictures. <span class="upper">All rights reserved.</span></p>
-          <p>In Theaters July 2, 2025.</p>
-      </div>
+  <div class="wrapper">
+    <div class="icon-wrapper">
+      <img src="/assets/icons/facebook-icon.jpg" />
+      <img src="/assets/icons/InstagramIcon.jpg" />
+      <img src="/assets/icons/youtube-icon.jpg" />
     </div>
+    <div class="p-wrapper">
+      <p class="upper">Movie platform © 2025 Powster</p>
+      <p>© 2025 Universal Pictures. <span class="upper">All rights reserved.</span></p>
+      <p>In Theaters July 2, 2025.</p>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .wrapper {
   width: 100%;
-  min-height: rem(50);
+  min-height: rem(40);
   background-color: $lightgreen;
 }
 
 .icon-wrapper {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   padding-top: 0.5rem;
   padding-left: 1rem;
   padding-bottom: 0.5rem;
@@ -65,9 +66,15 @@ img {
 }
 
 @media (min-width: 1024px) {
-  img {
-    max-width: rem(40);
-    max-height: rem(40);
-  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+  .icon-wrapper {
+}
+
+.p-wrapper {
+  align-items: end;
+}
 }
 </style>

@@ -16,7 +16,7 @@ function toggleHamburgerMenu() {
 <template>
   <div class="menu-container">
     <div class="hamburger-container">
-      <button :class="['hamburger', { active: isActive }]" @click="toggleHamburgerMenu">
+      <button :class="['hamburger', { active: isActive }]" @click="toggleHamburgerMenu" aria-label="Navigation menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -28,10 +28,10 @@ function toggleHamburgerMenu() {
 
       <nav class="nav-links">
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/">Home</RouterLink>
+          <RouterLink class="router-link" to="/" @click="toggleHamburgerMenu">Home</RouterLink>
         </div>
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/about">About</RouterLink>
+          <RouterLink class="router-link" to="/about" @click="toggleHamburgerMenu">About</RouterLink>
         </div>
         <div class="router-link-wrapper router-link-wrapper-icon">
           <img
@@ -42,16 +42,14 @@ function toggleHamburgerMenu() {
           />
         </div>
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/tickets">Tickets</RouterLink>
+          <RouterLink class="router-link" to="/cast" @click="toggleHamburgerMenu">Cast/Crew</RouterLink>
         </div>
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/cast">Cast</RouterLink>
+          <RouterLink class="router-link" to="/tickets" @click="toggleHamburgerMenu">Tickets</RouterLink>
         </div>
       </nav>
     </div>
-
-  </div>
-  <div class="router-link-icon-mobile-wrapper">
+    <div class="router-link-icon-mobile-wrapper">
       <img
           v-if="ShouldShowSvg"
           class="router-link router-link-icon router-link-icon-mobile"
@@ -59,6 +57,8 @@ function toggleHamburgerMenu() {
           height="115px"
           />
     </div>
+  </div>
+  
   <RouterView />
 </template>
 
@@ -66,7 +66,9 @@ function toggleHamburgerMenu() {
 
 .menu-container {
   position: relative;
-  width: 80%;
+  background-color: $black;
+  width: 100%;
+  height: 10vh;
 }
 .menu-open-wrapper {
   background-color: $black;
@@ -109,16 +111,8 @@ function toggleHamburgerMenu() {
 
     &:hover{
       border-bottom: 1px solid $white;
-
-
     }
   }
-}
-.menu-container {
-  position: relative;
-  background-color: $black;
-  width: 100%;
-  height: 10vh;
 }
 
 .hamburger-container {
@@ -138,27 +132,55 @@ function toggleHamburgerMenu() {
   background: transparent;
   border: 0;
   z-index: 999;
+  position: absolute;
+  .hamburger-line {
+      display: block;
+      width: 2.3125rem;
+      height: 0.125rem;
+      background-color: $white;
+      border-radius: 0.375rem;
+      margin-bottom: 0.625rem;
+      transition: all 0.3s ease-in-out;
+    }
 }
 
 .router-link-wrapper-icon {
   display: none;
 }
 .router-link-icon-mobile-wrapper{
+  position: absolute;
+  top: 10%;
+  right: 1rem;
   display: flex;
   justify-content: right;
   height: 100px;
+}
 
 .hamburger.active {
-  position: relative;
-  // right: 1.25rem;
+  position: absolute;
   left: 19rem;
 }
+
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    height: 0.25rem;
+  }
+
+  .hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 1.25rem;
+    height: 0.25rem;
+  }
 
   .router-link-icon-mobile{
     height: 80px;
   }
-
-}
 
 // ------------Tablet/desktop navigation-----------
 
@@ -175,7 +197,9 @@ function toggleHamburgerMenu() {
   .hamburger {
     display: none;
   }
-
+  .router-link-icon-mobile-wrapper{
+  display: none;
+  }
   .router-link-wrapper {
     border-bottom: none;
     justify-content: center;
@@ -183,6 +207,11 @@ function toggleHamburgerMenu() {
 
     .router-link{
       margin-left: 0;
+    }
+    
+
+    .router-link-active {
+      border-bottom: 2px solid $white;
     }
   }
 

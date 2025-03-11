@@ -13,7 +13,7 @@ button {
   height: 2.8125rem;
   width: 2.8125rem;
   border: none;
-  border-radius: 8px;
+  border-radius: rem(8);
   margin: 0.2rem;
   background-color: #d9d9d9;
   @include h2;

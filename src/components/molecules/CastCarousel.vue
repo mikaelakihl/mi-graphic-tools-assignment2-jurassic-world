@@ -118,7 +118,7 @@ h2 {
 
     p {
       color: $white;
-      font-size: 12px;
+      font-size: rem(12);
       margin: 0;
     }
 

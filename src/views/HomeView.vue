@@ -64,7 +64,7 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
     margin: 0;
     margin-top: 1rem;
     color: rgba(255, 255, 255, 0.5);
-    font-size: 20px;
+    font-size: rem(20);
     font-style: italic;
     @include h3;
       

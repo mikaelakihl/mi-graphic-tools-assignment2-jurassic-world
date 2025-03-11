@@ -41,7 +41,7 @@
   p {
     color: $white;
     @include h2;
-    font-size: 6px;
+    font-size: rem(6);
   }
 }
 

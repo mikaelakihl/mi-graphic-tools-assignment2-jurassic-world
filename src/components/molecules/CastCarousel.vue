@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import scarlettImage from '@/assets/actors/scarlet-johansson.jpg';
+import scarlettImage from '/assets/actors/scarlet-johansson.jpg';
 const actors = [
   {
     name: "Scarlett Johansson",

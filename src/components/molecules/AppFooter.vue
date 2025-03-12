@@ -69,10 +69,10 @@ img {
   .wrapper {
     display: flex;
     justify-content: space-between;
-}
+  }
 
-.p-wrapper {
-  align-items: end;
-}
+  .p-wrapper {
+    align-items: end;
+  }
 }
 </style>

@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
-import { RouterLink, RouterView, useRoute } from 'vue-router';
+import { computed, ref } from 'vue'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 
-const isActive = ref(false);
-const route = useRoute();
-const ShouldShowSvg = computed(()=> {
-  return route.path!== '/';
-});
+const isActive = ref(false)
+const route = useRoute()
+const ShouldShowSvg = computed(() => {
+  return route.path !== '/'
+})
 
 function toggleHamburgerMenu() {
   isActive.value = !isActive.value
@@ -16,7 +16,11 @@ function toggleHamburgerMenu() {
 <template>
   <div class="menu-container">
     <div class="hamburger-container">
-      <button :class="['hamburger', { active: isActive }]" @click="toggleHamburgerMenu" aria-label="Navigation menu">
+      <button
+        :class="['hamburger', { active: isActive }]"
+        @click="toggleHamburgerMenu"
+        aria-label="Navigation menu"
+      >
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -31,7 +35,9 @@ function toggleHamburgerMenu() {
           <RouterLink class="router-link" to="/" @click="toggleHamburgerMenu">Home</RouterLink>
         </div>
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/about" @click="toggleHamburgerMenu">About</RouterLink>
+          <RouterLink class="router-link" to="/about" @click="toggleHamburgerMenu"
+            >About</RouterLink
+          >
         </div>
         <div class="router-link-wrapper router-link-wrapper-icon">
           <img
@@ -42,32 +48,35 @@ function toggleHamburgerMenu() {
           />
         </div>
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/cast" @click="toggleHamburgerMenu">Cast/Crew</RouterLink>
+          <RouterLink class="router-link" to="/cast" @click="toggleHamburgerMenu"
+            >Cast/Crew</RouterLink
+          >
         </div>
         <div class="router-link-wrapper">
-          <RouterLink class="router-link" to="/tickets" @click="toggleHamburgerMenu">Tickets</RouterLink>
+          <RouterLink class="router-link" to="/tickets" @click="toggleHamburgerMenu"
+            >Tickets</RouterLink
+          >
         </div>
       </nav>
     </div>
     <div class="router-link-icon-mobile-wrapper">
       <img
-          v-if="ShouldShowSvg"
-          class="router-link router-link-icon router-link-icon-mobile"
-          src="/assets/svg/JurassicWorld.svg"
-          height="115px"
-          />
+        v-if="ShouldShowSvg"
+        class="router-link router-link-icon router-link-icon-mobile"
+        src="/assets/svg/JurassicWorld.svg"
+        height="115px"
+      />
     </div>
   </div>
-  
+
   <RouterView />
 </template>
 
 <style lang="scss" scoped>
-
 .menu-container {
   position: relative;
   background-color: $black;
-  width: 100%;
+  width: 80%;
   height: 10vh;
 }
 .menu-open-wrapper {
@@ -110,7 +119,7 @@ function toggleHamburgerMenu() {
     @include h4;
     color: $white;
 
-    &:hover{
+    &:hover {
       border-bottom: 2px solid $white;
     }
   }
@@ -135,20 +144,20 @@ function toggleHamburgerMenu() {
   z-index: 999;
   position: absolute;
   .hamburger-line {
-      display: block;
-      width: 2.3125rem;
-      height: 0.125rem;
-      background-color: $white;
-      border-radius: 0.375rem;
-      margin-bottom: 0.625rem;
-      transition: all 0.3s ease-in-out;
-    }
+    display: block;
+    width: 2.3125rem;
+    height: 0.125rem;
+    background-color: $white;
+    border-radius: 0.375rem;
+    margin-bottom: 0.625rem;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .router-link-wrapper-icon {
   display: none;
 }
-.router-link-icon-mobile-wrapper{
+.router-link-icon-mobile-wrapper {
   position: absolute;
   top: 10%;
   right: 1rem;
@@ -158,30 +167,30 @@ function toggleHamburgerMenu() {
 }
 
 .hamburger.active {
-  position: absolute;
-  left: 19rem;
+  right: 1rem;
+  left: auto;
 }
 
 .hamburger.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg);
-    position: absolute;
-    height: 0.25rem;
-  }
+  transform: rotate(45deg);
+  position: absolute;
+  height: 0.25rem;
+}
 
-  .hamburger.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
 
-  .hamburger.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 1.25rem;
-    height: 0.25rem;
-  }
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 1.25rem;
+  height: 0.25rem;
+}
 
-  .router-link-icon-mobile{
-    height: 80px;
-  }
+.router-link-icon-mobile {
+  height: 80px;
+}
 
 // ------------Tablet/desktop navigation-----------
 
@@ -193,7 +202,7 @@ function toggleHamburgerMenu() {
   }
 
   .menu-open-wrapper.active {
-  border-right: none;
+    border-right: none;
   }
 
   .menu-open-heading {
@@ -203,18 +212,17 @@ function toggleHamburgerMenu() {
   .hamburger {
     display: none;
   }
-  .router-link-icon-mobile-wrapper{
-  display: none;
+  .router-link-icon-mobile-wrapper {
+    display: none;
   }
   .router-link-wrapper {
     border-bottom: none;
     justify-content: center;
     height: auto;
 
-    .router-link{
+    .router-link {
       margin-left: 0;
     }
-    
 
     .router-link-active {
       border-bottom: 2px solid $white;
@@ -245,7 +253,7 @@ function toggleHamburgerMenu() {
 
     .router-link-icon {
       max-width: 100%;
-      &:hover{
+      &:hover {
         border-bottom: 2px solid $black;
       }
     }

@@ -1,21 +1,24 @@
 <script setup lang="ts">
-import TheButton from '@/components/atoms/TheButton.vue';
-import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
+import TheButton from '@/components/atoms/TheButton.vue'
+import CookiesBanner from '@/components/molecules/CookiesBanner.vue'
 </script>
 
 <template>
   <div class="home">
     <div class="image-container">
-      <img src="\assets\icons\jurassic-logo.jpg" alt="" width="390px" height="425px">
+      <img src="\assets\icons\jurassic-logo.jpg" alt="" width="390px" height="425px" />
     </div>
     <h2 class="premier-text">Premiere 2 July</h2>
     <div class="button-container">
-      <TheButton button-text="Watch Trailer" class="homepage-buttons"/>
-      <TheButton button-text="Book Tickets" class="homepage-buttons"/>
+      <TheButton button-text="Watch Trailer" class="homepage-buttons" />
+      <TheButton button-text="Book Tickets" class="homepage-buttons" />
     </div>
     <div class="quote-container">
       <blockquote>
-        <p class="quote-p">"I came for dinosaurs. I stayed because I was too shocked to move. 10/10, would get eaten again."</p>
+        <p class="quote-p">
+          "I came for dinosaurs. I stayed because I was too shocked to move. 10/10, would get eaten
+          again."
+        </p>
         <p class="quote-giver">-Dino Saar</p>
       </blockquote>
     </div>
@@ -24,10 +27,9 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
 </template>
 
 <style lang="scss" scoped>
-
 .home {
   background-color: black;
-  height: 84.1vh;
+  min-height: 84.1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +60,7 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
       white-space: nowrap;
     }
   }
-  
+
   .quote-container {
     width: 100%;
     margin: 0;
@@ -67,7 +69,7 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
     font-size: rem(20);
     font-style: italic;
     @include h3;
-      
+
     .quote-giver {
       text-align: right;
     }
@@ -80,10 +82,10 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .home {
-      height: 83vh;
-      max-height: 83vh;
-      overflow-y: auto;
+  .home {
+    height: 83vh;
+    max-height: 83vh;
+    overflow-y: auto;
     .image-container {
       width: 100%;
       height: auto;
@@ -108,8 +110,8 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
         height: 2.9375rem;
       }
     }
-    
-    .quote-container {  
+
+    .quote-container {
       .quote-giver {
         margin-right: 7rem;
       }
@@ -137,30 +139,27 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue';
       }
     }
 
-h2 {
-  z-index: 1;
-  margin-top: -240px;
-}
+    h2 {
+      z-index: 1;
+      margin-top: -240px;
+    }
 
-.button-container {
+    .button-container {
+      .homepage-buttons {
+        z-index: 1;
+      }
+    }
 
-  .homepage-buttons {
-    z-index: 1;
+    .quote-container {
+      width: 47%;
+      .quote-giver {
+        text-align: right;
+      }
+
+      .quote-p {
+        width: 100%;
+      }
+    }
   }
 }
-
-.quote-container {  
-  width: 47%;
-  .quote-giver {
-    text-align: right;
-  }
-
-  .quote-p {
-    width: 100%;
-  }
-}
-}
-}
-
-
 </style>

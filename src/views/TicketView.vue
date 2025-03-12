@@ -18,7 +18,7 @@ const updateTicketAmount = (amount: number) => {
 
 <template>
   <div class="ticket">
-    <BookingCard @enable-form="enableForm" />
+    <BookingCard @enable-form="enableForm" class="ticket-card" />
     <OrderForm
       :ticketAmount="ticketAmount"
       :formEnabled="formEnabled"
@@ -33,6 +33,10 @@ h1 {
 }
 .ticket {
   background-color: black;
-  height: 84.1vh;
+  min-height: 85vh;
+}
+
+.ticket-card {
+  margin-top: 1rem;
 }
 </style>

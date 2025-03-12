@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CastCarousel from '@/components/molecules/CastCarousel.vue';
+import CastCarousel from '@/components/molecules/CastCarousel.vue'
 </script>
 
 <template>
@@ -32,7 +32,7 @@ import CastCarousel from '@/components/molecules/CastCarousel.vue';
         <p>based om characters created by Michael Crichton</p>
       </div>
     </div>
-    
+
     <a href="https://www.imdb.com/title/tt31036941/" target="_blank">Read more about production</a>
 
     <img src="/assets/imgs/jurassic-world-rebirth-ocean.jpg" />
@@ -40,7 +40,6 @@ import CastCarousel from '@/components/molecules/CastCarousel.vue';
 </template>
 
 <style lang="scss" scoped>
-
 .cast {
   display: flex;
   flex-direction: column;
@@ -52,15 +51,14 @@ import CastCarousel from '@/components/molecules/CastCarousel.vue';
     font-size: rem(24);
     font-weight: 400;
     margin-left: rem(30);
-
   }
   a {
-      @include link;
-      color: $yellow;
-      align-self: center;
-      padding-top: rem(20);
-      text-decoration: none;
-    }
+    @include link;
+    color: $yellow;
+    align-self: center;
+    padding-top: rem(20);
+    text-decoration: none;
+  }
 
   img {
     padding: rem(10);
@@ -71,7 +69,6 @@ import CastCarousel from '@/components/molecules/CastCarousel.vue';
   .crew-info {
     font-size: rem(16);
     margin-left: rem(30);
-
 
     h3 {
       font-weight: 700;
@@ -88,33 +85,32 @@ import CastCarousel from '@/components/molecules/CastCarousel.vue';
 }
 
 @media (min-width: 720px) {
-.cast {
-  a {
-  margin: rem(40);
-}
-}
+  .cast {
+    a {
+      margin: rem(40);
+    }
+  }
   .crew {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  text-align: center;
-  h2 {
-    margin-left: 0;
-    grid-column: 1/5 span;
-  }
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    h2 {
+      margin-left: 0;
+      grid-column: 1/5 span;
+    }
 
-  :nth-child(2), :nth-child(4) {
-    grid-column: 2 / 3;
-  }
-  
-  :nth-child(3), :nth-child(5) {
-    grid-column: 4 / 5;
-  }
-  .crew-info {
-    text-align: left;
-  }
+    :nth-child(2),
+    :nth-child(4) {
+      grid-column: 2 / 3;
+    }
 
+    :nth-child(3),
+    :nth-child(5) {
+      grid-column: 4 / 5;
+    }
+    .crew-info {
+      text-align: left;
+    }
+  }
 }
-
-}
-
 </style>

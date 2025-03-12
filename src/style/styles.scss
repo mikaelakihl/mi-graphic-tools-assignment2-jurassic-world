@@ -11,7 +11,8 @@ body {
 
 // INPUTS
 
-input:not([type="checkbox"]) { // All inputs but checkboxes
+input:not([type='checkbox']) {
+  // All inputs but checkboxes
   background-color: $white;
   color: $black;
   padding: 10px;
@@ -21,10 +22,9 @@ input:not([type="checkbox"]) { // All inputs but checkboxes
   height: 50px;
   text-align: center;
   transition: background-color 0.3s ease;
-
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -41,11 +41,10 @@ input[type="checkbox"] {
   justify-content: center;
   cursor: pointer;
   position: relative;
-  
 }
 
-input[type="checkbox"]:checked::after {
-  content: "\2716"; // Svart X-symbol
+input[type='checkbox']:checked::after {
+  content: '\2716'; // Svart X-symbol
   font-size: 30px;
   color: black;
   position: absolute;

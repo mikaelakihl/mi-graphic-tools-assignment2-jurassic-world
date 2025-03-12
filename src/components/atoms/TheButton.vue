@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps({
   buttonText: { type: String, required: true },
-    });
+})
 </script>
 <template>
   <button>{{ buttonText }}</button>

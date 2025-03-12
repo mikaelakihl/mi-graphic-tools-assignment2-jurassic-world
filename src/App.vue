@@ -12,5 +12,4 @@ import AppFooter from './components/molecules/AppFooter.vue'
   <AppFooter />
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

@@ -2,7 +2,7 @@
 import BookBtn from '../atoms/BookBtn.vue'
 import { ref, defineEmits } from 'vue'
 
-const emit = defineEmits(['enable-form']);
+const emit = defineEmits(['enable-form'])
 
 interface IDay {
   date: string
@@ -39,7 +39,7 @@ generateDates()
       <h2 class="bookingDate">{{ day.display }}</h2>
       <p class="bookingTime">6:00 PM</p>
       <p class="bookingLocation">Salon 8, Dolby Theatre</p>
-      <BookBtn @click="emit('enable-form')"/>
+      <BookBtn @click="emit('enable-form')" />
     </div>
   </div>
 </template>
@@ -105,6 +105,4 @@ generateDates()
     }
   }
 }
-
 </style>
-

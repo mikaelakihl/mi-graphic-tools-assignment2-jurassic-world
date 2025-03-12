@@ -161,7 +161,7 @@ function toggleHamburgerMenu() {
 .router-link-icon-mobile-wrapper {
   position: absolute;
   top: 10%;
-  right: 1rem;
+  right: clamp(-9rem, -6rem, -5rem);
   display: flex;
   justify-content: right;
   height: 100px;

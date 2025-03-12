@@ -37,6 +37,13 @@ h1 {
 }
 
 .ticket-card {
-  margin-top: 1rem;
+  margin-top: 5vh;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ticket-card {
+    margin-top: 5vh;
+    justify-content: center;
+  }
 }
 </style>

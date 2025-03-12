@@ -86,6 +86,7 @@ function toggleHamburgerMenu() {
   color: $white;
   display: none;
   position: fixed;
+  z-index: 998;
   top: 0;
 }
 

@@ -137,6 +137,7 @@ function toggleHamburgerMenu() {
 }
 
 .hamburger {
+  cursor: pointer;
   width: 3.125rem;
   height: 3.125rem;
   margin: 0.5rem 0 0 0.5rem;

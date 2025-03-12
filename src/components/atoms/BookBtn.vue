@@ -4,6 +4,7 @@
 
 <style lang="scss" scoped>
 button {
+  cursor: pointer;
   width: rem(117);
   height: rem(47);
   background-color: $yellow;

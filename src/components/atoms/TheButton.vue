@@ -8,6 +8,7 @@ defineProps({
 </template>
 <style lang="scss" scoped>
 button {
+  cursor: pointer;
   background-color: $lightgreen;
   color: $white;
   width: 11.5625rem;

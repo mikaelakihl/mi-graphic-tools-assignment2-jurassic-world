@@ -29,7 +29,7 @@ import CookiesBanner from '@/components/molecules/CookiesBanner.vue'
 <style lang="scss" scoped>
 .home {
   background-color: black;
-  min-height: 84.1vh;
+  min-height: 85.1vh;
   display: flex;
   flex-direction: column;
   align-items: center;

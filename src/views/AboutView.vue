@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 84.1vh;
+  min-height: 85.1vh;
   img {
     object-fit: cover;
     max-width: 100vw;

@@ -16,9 +16,9 @@ We are a group of students at the Front End Development program at Medieinstitut
 
 ## 🔗 Links
 
-[Github Repositorie](https://github.com/Medieinstitutet/fed24d-arbetsmetodik-inl-1-Davkje/)
+[Github Repository](https://github.com/Medieinstitutet/fed24d-arbetsmetodik-inl-1-Davkje/)
 
-[Github Pages](https://medieinstitutet.github.io/fed24d-arbetsmetodik-inl-1-Davkje/) - *Live version of the project*
+[Github Pages](https://medieinstitutet.github.io/fed24d-grafiska-verktyg-kejsartamarinerna/) - *Live version of the project*
 
 ## Tech Stack
 

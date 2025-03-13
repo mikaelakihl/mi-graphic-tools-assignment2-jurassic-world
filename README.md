@@ -40,11 +40,12 @@ We are a group of students at the Front End Development program at Medieinstitut
 
 ## Preview
 
-![Preview](assets/preview.png) // TODO
+![Preview](assets/preview-desktop.png)
 
 ## Design
 
 ![Preview](assets/design/mobile-pages.jpg)
+
 ## Features
 
 - Multi-page navigation with Vue Router
@@ -86,8 +87,3 @@ pnpm build
 ```sh
 pnpm lint
 ```
-
-
-## Validation
-
-[Lighthouse](assets/lighthouse.pdf) // TODO
